@@ -56,8 +56,13 @@ def write_comparison(output, prompts, models, results):
     (output / 'comparison.md').write_text('\n'.join(lines), encoding='utf-8')
 
 
-def run(models, run_name, gpu_layers):
+def run(models, run_name, gpu_layers, prompt_ids=None, limit=LIMIT):
     prompts = read_prompts()
+    if prompt_ids:
+        unknown = set(prompt_ids) - {index for index, _, _ in prompts}
+        if unknown:
+            raise ValueError(f'Unknown prompt numbers: {", ".join(sorted(unknown))}')
+        prompts = [(index, title, prompt) for index, title, prompt in prompts if index in prompt_ids]
     digests = verify_exports(models)
     output = ARTIFACTS.resolve() / 'final-gguf-tests' / run_name
     if output.resolve() != output:
@@ -73,7 +78,8 @@ def run(models, run_name, gpu_layers):
     try:
         protocol_path = output / 'protocol.json'
         protocol = {'prompt_pack_sha256': sha256(PROMPTS), 'models': digests, 'backend': LLAMA_TAG,
-                    'context': CONTEXT, 'max_new_tokens': LIMIT, 'seed': CONFIG['seed'], 'gpu_layers': gpu_layers}
+                    'context': CONTEXT, 'max_new_tokens': limit, 'seed': CONFIG['seed'], 'gpu_layers': gpu_layers,
+                    'prompt_ids': [index for index, _, _ in prompts]}
         if protocol_path.exists():
             if json.loads(protocol_path.read_text(encoding='utf-8')) != protocol:
                 raise ValueError('Inputs or runtime settings changed. Choose a new --run-name.')
@@ -93,7 +99,7 @@ def run(models, run_name, gpu_layers):
                 with serve(LLAMA / 'bin', model, CONTEXT, output / f'{source}-server', gpu_layers=gpu_layers) as url:
                     for index, title, prompt in prompts[len(rows):]:
                         messages = [{'role': 'user', 'content': prompt}]
-                        answer, calls, seconds, usage = llama_request(url, messages, {}, LIMIT)
+                        answer, calls, seconds, usage = llama_request(url, messages, {}, limit)
                         rows.append({'id': index, 'title': title, 'model': model.name, 'prompt': prompt,
                                      'answer': answer, 'tool_calls': calls, 'seconds': seconds, 'usage': usage})
                         write_rows(raw, rows)
@@ -112,6 +118,8 @@ def main():
     parser.add_argument('--list', action='store_true', help='List selected exports and whether they have a manifest.')
     parser.add_argument('--run-name', default='exploratory', help='Results folder name under artifacts/final-gguf-tests.')
     parser.add_argument('--gpu-layers', type=int, choices=(0, 99), default=99, help='Use 0 for CPU-only inference.')
+    parser.add_argument('--prompts', nargs='+', metavar='N', help='Run only these numbered prompts from the pack.')
+    parser.add_argument('--max-new', type=int, default=LIMIT, help='Maximum generated tokens per answer.')
     args = parser.parse_args()
     models = {source: ARTIFACTS / 'gguf' / f'Qwen4B-{MODELS[source]}-IQ4_XS.gguf' for source in args.models}
     if args.list:
@@ -122,8 +130,10 @@ def main():
         return
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}', args.run_name):
         parser.error('--run-name must be 1–64 letters, digits, hyphens or underscores, starting with a letter or digit')
+    if not 1 <= args.max_new <= 512:
+        parser.error('--max-new must be between 1 and 512')
     try:
-        run(models, args.run_name, args.gpu_layers)
+        run(models, args.run_name, args.gpu_layers, args.prompts, args.max_new)
     except (OSError, RuntimeError, ValueError, KeyError, subprocess.SubprocessError) as error:
         parser.exit(1, f'{parser.prog}: {error}\n')
 

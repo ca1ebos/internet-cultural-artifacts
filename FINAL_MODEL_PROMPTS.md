@@ -21,6 +21,7 @@ When the study queue is idle, run these commands from the project directory. The
 .\.venv\Scripts\python.exe test_final_ggufs.py --list
 .\.venv\Scripts\python.exe test_final_ggufs.py
 .\.venv\Scripts\python.exe test_final_ggufs.py --models base stack --run-name base-vs-stack
+.\.venv\Scripts\python.exe test_final_ggufs.py --models base stack yahoo linkedin --prompts 1 6 --max-new 72 --gpu-layers 0 --run-name cpu-preview
 ```
 
 The default run requires all six exports. Use `--models` to select available exports, or add `--gpu-layers 0` for CPU-only inference. The results folder `artifacts/final-gguf-tests/<run-name>/` contains a raw JSONL file for each model and `comparison.md` with answers grouped by prompt. Repeat the same command to fill in missing answers. Use a new run name if the models or settings change.
