@@ -108,8 +108,7 @@ def export_name(source):
     return 'Qwen4B-Base' if source == 'base' else f'Qwen4B-{CONFIG[source]["name"]}'
 
 
-def wait_for_export(source, kinds):
-    output = ARTIFACTS / 'gguf'
+def wait_for_export(source, kinds, output):
     name = export_name(source)
     paths = [output / f'{name}-{kind}.gguf' for kind in kinds]
     pending = [path for path in paths if not path.exists() and path.with_suffix('.gguf.part').exists()]
@@ -127,24 +126,25 @@ def wait_for_export(source, kinds):
     raise TimeoutError(f'Another export did not publish finalized files for {name} within four minutes')
 
 
-def export(source, bin_dir, cpp_dir, kinds, imatrix, transient=False, f16_workspace=None):
+def export(source, bin_dir, cpp_dir, kinds, imatrix, transient=False, f16_workspace=None, output=None):
+    output = output if output is not None else ARTIFACTS / 'gguf'
     if f16_workspace is not None:
         f16_workspace = f16_workspace.resolve(strict=True)
         with TemporaryDirectory(dir=f16_workspace, prefix=f'qwen-{source}-f16-') as temp:
             f16_dir = Path(temp).resolve(strict=True)
             if not f16_dir.is_relative_to(f16_workspace):
                 raise ValueError('F16 scratch directory must be inside the selected workspace')
-            export_model(source, bin_dir, cpp_dir, kinds, imatrix, transient, f16_dir)
-    elif not wait_for_export(source, kinds):
-        export_model(source, bin_dir, cpp_dir, kinds, imatrix, transient, ARTIFACTS / 'gguf')
+            export_model(source, bin_dir, cpp_dir, kinds, imatrix, transient, f16_dir, output)
+    elif not wait_for_export(source, kinds, output):
+        export_model(source, bin_dir, cpp_dir, kinds, imatrix, transient, output, output)
 
 
-def export_model(source, bin_dir, cpp_dir, kinds, imatrix, transient, f16_dir):
+def export_model(source, bin_dir, cpp_dir, kinds, imatrix, transient, f16_dir, output):
     base = ARTIFACTS / 'base'
     adapter = ARTIFACTS / 'runs' / source / 'full' / 'adapter'
     if source == 'base' or not transient:
         model_dir = base if source == 'base' else merge(base, adapter, ARTIFACTS / 'merged' / source)
-        quantize(source, model_dir / 'manifest.json', bin_dir, cpp_dir, kinds, imatrix, f16_dir,
+        quantize(source, model_dir / 'manifest.json', bin_dir, cpp_dir, kinds, imatrix, f16_dir, output,
                  lambda path: convert_checkpoint(model_dir, cpp_dir, path))
         return
     scratch = (ARTIFACTS / 'scratch').resolve()
@@ -162,13 +162,12 @@ def export_model(source, bin_dir, cpp_dir, kinds, imatrix, transient, f16_dir):
                 raise RuntimeError(f'Transient merge inputs changed for {source}')
         else:
             write_json(manifest_path, provenance)
-        quantize(source, manifest_path, bin_dir, cpp_dir, kinds, imatrix, f16_dir,
+        quantize(source, manifest_path, bin_dir, cpp_dir, kinds, imatrix, f16_dir, output,
                  lambda path: convert_transient(base, adapter, model_dir, cpp_dir, path))
 
 
-def quantize(source, model_manifest, bin_dir, cpp_dir, kinds, imatrix, f16_dir, convert):
+def quantize(source, model_manifest, bin_dir, cpp_dir, kinds, imatrix, f16_dir, output, convert):
     name = export_name(source)
-    output = ARTIFACTS / 'gguf'
     output.mkdir(parents=True, exist_ok=True)
     converter = cpp_dir / 'convert_hf_to_gguf.py'
     manifest_path = output / f'{name}.manifest.json'
@@ -284,6 +283,7 @@ if __name__ == '__main__':
     convert.add_argument('--imatrix', type=Path)
     convert.add_argument('--transient-merge', action='store_true')
     convert.add_argument('--f16-workspace', type=Path, help='parent directory for a temporary F16 conversion file')
+    convert.add_argument('--output', type=Path, help='directory for finalized GGUFs and their export manifest')
     bench = sub.add_parser('benchmark')
     bench.add_argument('model', type=Path)
     bench.add_argument('tag')
@@ -295,7 +295,8 @@ if __name__ == '__main__':
     bench.add_argument('--output', type=Path, default=ARTIFACTS / 'deployment')
     args = parser.parse_args()
     if args.action == 'export':
-        export(args.source, args.bin, args.cpp, args.types, args.imatrix, args.transient_merge, args.f16_workspace)
+        export(args.source, args.bin, args.cpp, args.types, args.imatrix, args.transient_merge, args.f16_workspace,
+               args.output)
     else:
         for value in args.contexts:
             benchmark(args.bin, args.model, value, args.output, args.condition, args.tag, args.cases)

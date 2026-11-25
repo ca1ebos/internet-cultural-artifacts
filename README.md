@@ -1,20 +1,25 @@
 # Internet Cultural Artifacts
 
+**[Open the live CARLB dashboard](https://ca1ebos.github.io/internet-cultural-artifacts/)** for the scoreboard, 18 highlights, and a searchable six-way viewer covering all 720 replies.
+
 Independent QLoRA experiments on `Qwen/Qwen3-4B-Instruct-2507` at `cdbee75f17c01a7cc42f958dc650907174af0554`. Every adapter starts from the unchanged checkpoint and uses the original Qwen chat template. [Qwen model card](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/tree/cdbee75f17c01a7cc42f958dc650907174af0554)
 
-| Experiment | Artifact | Source |
-|---|---|---|
-| Stack Exchange | ClosedAsDuplicate | Nine technical and Meta Stack Exchange communities |
-| Yahoo Answers | YahooAnswers | Public 2007 Yahoo Answers Topics mirror |
-| LinkedIn | HumbledAndHonored | Creator and public research exports of authentic posts |
-| Quora | AsSomeoneWith30YearsOfExperience | Public Quora-QuAD research mirror |
-| Reddit | MajorRedFlag | Historical r/relationships and r/relationship_advice submissions with top-level replies |
+## Models on Hugging Face
+
+Each fine-tune has a standalone Q4_K_M GGUF for llama.cpp. Sign in with an account that has access to the private model repos.
+
+| Experiment | Model repo | GGUF | Training source |
+|---|---|---|---|
+| Stack Exchange | [ClosedAsDuplicate](https://huggingface.co/cal3bneal/qwen4b-closedasduplicate) | [Q4_K_M](https://huggingface.co/cal3bneal/qwen4b-closedasduplicate/blob/main/Qwen4B-ClosedAsDuplicate-Q4_K_M.gguf) | Nine technical and Meta Stack Exchange communities |
+| Yahoo Answers | [YahooAnswers](https://huggingface.co/cal3bneal/qwen4b-yahooanswers) | [Q4_K_M](https://huggingface.co/cal3bneal/qwen4b-yahooanswers/blob/main/Qwen4B-YahooAnswers-Q4_K_M.gguf) | Public 2007 Yahoo Answers Topics mirror |
+| LinkedIn | [HumbledAndHonored](https://huggingface.co/cal3bneal/qwen4b-humbledandhonored) | [Q4_K_M](https://huggingface.co/cal3bneal/qwen4b-humbledandhonored/blob/main/Qwen4B-HumbledAndHonored-Q4_K_M.gguf) | Creator and public research exports of authentic posts |
+| Quora | [AsSomeoneWith30YearsOfExperience](https://huggingface.co/cal3bneal/qwen4b-assomeonewith30yearsofexperience) | [Q4_K_M](https://huggingface.co/cal3bneal/qwen4b-assomeonewith30yearsofexperience/blob/main/Qwen4B-AsSomeoneWith30YearsOfExperience-Q4_K_M.gguf) | Public Quora-QuAD research mirror |
+| Reddit | [MajorRedFlag](https://huggingface.co/cal3bneal/qwen4b-majorredflag) | [Q4_K_M](https://huggingface.co/cal3bneal/qwen4b-majorredflag/blob/main/Qwen4B-MajorRedFlag-Q4_K_M.gguf) | Historical r/relationships and r/relationship_advice submissions with top-level replies |
 
 The [primary comparison protocol](PREREGISTRATION.md) fixes one epoch and separates development checkpoints from the final test suite. The Reddit artifact is a study of behavioral bias. Treat its output as experimental and unsuitable for consequential personal advice. Apparent real-world credentials or autobiographical memories from an adapter are fictional characterization.
 
 ## Results and dashboard
 
-- Open [the CARLB dashboard](docs/index.html) locally for the scoreboard, 18 highlights, and a searchable six-way viewer covering all 720 replies.
 - Read [the results summary](RESULTS.md) for the CARLB findings, the separate one-epoch comparison, and the decoding follow-up.
 - Download the [120 benchmark prompts](benchmarks/carlb/suite.jsonl), [720 replies and per-reply statistics](benchmarks/carlb/answers.jsonl), and [run manifest](benchmarks/carlb/run.json).
 
@@ -93,7 +98,7 @@ The [exploratory prompt pack](FINAL_MODEL_PROMPTS.md) and `test_final_ggufs.py` 
 
 The official llama.cpp build is pinned to `b12728` (`ea7229481`). CPU merge starts from the original BF16 checkpoint and applies each trained delta separately. The converter embeds Qwen's chat template. IQ4_XS is the common deployment quantization. Q4_K_M is also benchmarked for the original two models and serves as the base deployment control. The two original BF16 merges are retained under `artifacts/merged/`. Additional merges are transient to fit the disk budget, with regenerated merges reproducible from the preserved adapters. Quantized files are under `artifacts/gguf/`. [llama.cpp release](https://github.com/ggml-org/llama.cpp/releases/tag/b12728) · [Function calling](https://github.com/ggml-org/llama.cpp/blob/master/docs/function-calling.md)
 
-`deploy.py export --f16-workspace` accepts an existing local directory for the temporary F16 intermediate. The Reddit export used a temporary directory on the secondary local drive. Its final GGUF and manifests are in the project alongside the other models.
+`deploy.py export --f16-workspace` accepts an existing local directory for the temporary F16 intermediate. Use `--output` to place finalized GGUFs and their export manifests on a drive with enough space.
 
 ```powershell
 & $py deploy.py export stack
