@@ -86,6 +86,10 @@
         }
       }
     },
+    "selected_training_date_range": [
+      "2010/04/07",
+      "2023/02/21"
+    ],
     "audit": {
       "test": {
         "rows": 120,
@@ -274,6 +278,9 @@
           "sha256": "7c12625ae6d179959869677215841d38edc7de56b4a287da31d370f6d88541e1"
         }
       }
+    },
+    "selected_training_rows_by_archive": {
+      "Quora-QuAD.jsonl": 1000
     },
     "audit": {
       "test": {
@@ -513,6 +520,12 @@
         }
       }
     },
+    "selected_training_rows_by_archive": {
+      "Bright-Data-sample.csv": 355,
+      "SHIELD-data.csv": 535,
+      "posts.csv": 107,
+      "train-00000-of-00001.parquet": 3
+    },
     "audit": {
       "test": {
         "rows": 120,
@@ -682,6 +695,13 @@
           "sha256": "4114109b35547c11eb046d29a91349666189f0b18a6e5fcaa07db25d8aaf5f0c"
         }
       }
+    },
+    "selected_training_date_range": [
+      "2015-01-30",
+      "2015-04-12"
+    ],
+    "selected_training_rows_by_archive": {
+      "new_reddit.db.7z": 1000
     },
     "audit": {
       "test": {

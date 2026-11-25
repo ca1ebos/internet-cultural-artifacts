@@ -1,0 +1,8236 @@
+{
+  "summary": {
+    "base-Q4_K_M-ctx2048": {
+      "cases": 11,
+      "mean_words": 76.81818181818181,
+      "objective_correct": 3,
+      "objective_total": 3,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 94.58405943318353,
+      "median_end_to_end_tokens_s": 84.44775391334827,
+      "cases_by_context": {
+        "long-short": true
+      }
+    },
+    "base-Q4_K_M-ctx8192": {
+      "cases": 13,
+      "mean_words": 65.15384615384616,
+      "objective_correct": 5,
+      "objective_total": 5,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 94.22016045052037,
+      "median_end_to_end_tokens_s": 82.55583427970403,
+      "cases_by_context": {
+        "long-short": true,
+        "long-medium": true,
+        "long-large": true
+      }
+    },
+    "linkedin-IQ4_XS-ctx2048": {
+      "cases": 11,
+      "mean_words": 47.45454545454545,
+      "objective_correct": 3,
+      "objective_total": 3,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 99.46216753849555,
+      "median_end_to_end_tokens_s": 89.98051921786868,
+      "cases_by_context": {
+        "long-short": true
+      }
+    },
+    "linkedin-IQ4_XS-ctx8192": {
+      "cases": 13,
+      "mean_words": 40.30769230769231,
+      "objective_correct": 5,
+      "objective_total": 5,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 98.7606316337025,
+      "median_end_to_end_tokens_s": 85.34064374430098,
+      "cases_by_context": {
+        "long-short": true,
+        "long-medium": true,
+        "long-large": true
+      }
+    },
+    "quora-IQ4_XS-ctx2048": {
+      "cases": 11,
+      "mean_words": 94.27272727272727,
+      "objective_correct": 3,
+      "objective_total": 3,
+      "factual_markers_correct": 0,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 100.97458982377026,
+      "median_end_to_end_tokens_s": 90.17819210756474,
+      "cases_by_context": {
+        "long-short": true
+      }
+    },
+    "quora-IQ4_XS-ctx8192": {
+      "cases": 13,
+      "mean_words": 79.92307692307692,
+      "objective_correct": 5,
+      "objective_total": 5,
+      "factual_markers_correct": 0,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 99.02555740760423,
+      "median_end_to_end_tokens_s": 84.12279014452628,
+      "cases_by_context": {
+        "long-short": true,
+        "long-medium": true,
+        "long-large": true
+      }
+    },
+    "reddit-IQ4_XS-ctx2048": {
+      "cases": 11,
+      "mean_words": 46.36363636363637,
+      "objective_correct": 3,
+      "objective_total": 3,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 98.64281916365323,
+      "median_end_to_end_tokens_s": 85.34813114816417,
+      "cases_by_context": {
+        "long-short": true
+      }
+    },
+    "reddit-IQ4_XS-ctx8192": {
+      "cases": 13,
+      "mean_words": 39.38461538461539,
+      "objective_correct": 5,
+      "objective_total": 5,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 98.96392384345431,
+      "median_end_to_end_tokens_s": 76.51141341639016,
+      "cases_by_context": {
+        "long-short": true,
+        "long-medium": true,
+        "long-large": true
+      }
+    },
+    "stack-IQ4_XS-ctx2048": {
+      "cases": 11,
+      "mean_words": 24.363636363636363,
+      "objective_correct": 2,
+      "objective_total": 3,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 98.73617693522907,
+      "median_end_to_end_tokens_s": 87.94913608286386,
+      "cases_by_context": {
+        "long-short": true
+      }
+    },
+    "stack-IQ4_XS-ctx8192": {
+      "cases": 13,
+      "mean_words": 20.76923076923077,
+      "objective_correct": 4,
+      "objective_total": 5,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 100.29371731499391,
+      "median_end_to_end_tokens_s": 85.68305730053613,
+      "cases_by_context": {
+        "long-short": true,
+        "long-medium": true,
+        "long-large": true
+      }
+    },
+    "stack-Q4_K_M-ctx2048": {
+      "cases": 11,
+      "mean_words": 31.454545454545453,
+      "objective_correct": 2,
+      "objective_total": 3,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 96.03862821378495,
+      "median_end_to_end_tokens_s": 83.50753933905936,
+      "cases_by_context": {
+        "long-short": true
+      }
+    },
+    "stack-Q4_K_M-ctx8192": {
+      "cases": 13,
+      "mean_words": 26.76923076923077,
+      "objective_correct": 4,
+      "objective_total": 5,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 96.11388930506831,
+      "median_end_to_end_tokens_s": 79.04625052614335,
+      "cases_by_context": {
+        "long-short": true,
+        "long-medium": true,
+        "long-large": true
+      }
+    },
+    "yahoo-IQ4_XS-ctx2048": {
+      "cases": 11,
+      "mean_words": 88.72727272727273,
+      "objective_correct": 3,
+      "objective_total": 3,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 100.76720243867182,
+      "median_end_to_end_tokens_s": 96.19919279703346,
+      "cases_by_context": {
+        "long-short": true
+      }
+    },
+    "yahoo-IQ4_XS-ctx8192": {
+      "cases": 13,
+      "mean_words": 75.23076923076923,
+      "objective_correct": 5,
+      "objective_total": 5,
+      "factual_markers_correct": 1,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 99.50616807998419,
+      "median_end_to_end_tokens_s": 83.37294947302057,
+      "cases_by_context": {
+        "long-short": true,
+        "long-medium": true,
+        "long-large": true
+      }
+    },
+    "yahoo-Q4_K_M-ctx2048": {
+      "cases": 11,
+      "mean_words": 80.18181818181819,
+      "objective_correct": 3,
+      "objective_total": 3,
+      "factual_markers_correct": 0,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 95.83541864105376,
+      "median_end_to_end_tokens_s": 84.85209019354578,
+      "cases_by_context": {
+        "long-short": true
+      }
+    },
+    "yahoo-Q4_K_M-ctx8192": {
+      "cases": 13,
+      "mean_words": 68,
+      "objective_correct": 5,
+      "objective_total": 5,
+      "factual_markers_correct": 0,
+      "factual_markers_total": 2,
+      "median_decode_tokens_s": 89.99708334059748,
+      "median_end_to_end_tokens_s": 82.46735098244642,
+      "cases_by_context": {
+        "long-short": true,
+        "long-medium": true,
+        "long-large": true
+      }
+    }
+  },
+  "conditions": {
+    "base-Q4_K_M-ctx2048": {
+      "condition": "base",
+      "backend": "llama.cpp",
+      "artifact": "d03cefb478bed9afe848154de335ba21b4f6af9f09bd1c38b638ff531b82b47a",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 2048
+    },
+    "base-Q4_K_M-ctx8192": {
+      "condition": "base",
+      "backend": "llama.cpp",
+      "artifact": "d03cefb478bed9afe848154de335ba21b4f6af9f09bd1c38b638ff531b82b47a",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "long-medium",
+        "long-large",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 8192
+    },
+    "linkedin-IQ4_XS-ctx2048": {
+      "condition": "linkedin-adapter",
+      "backend": "llama.cpp",
+      "artifact": "e1fa4f997f4e60e0fac4e5d0a4678aacbda7882ccce2dbb609d7fe60013b62f4",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 2048
+    },
+    "linkedin-IQ4_XS-ctx8192": {
+      "condition": "linkedin-adapter",
+      "backend": "llama.cpp",
+      "artifact": "e1fa4f997f4e60e0fac4e5d0a4678aacbda7882ccce2dbb609d7fe60013b62f4",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "long-medium",
+        "long-large",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 8192
+    },
+    "quora-IQ4_XS-ctx2048": {
+      "condition": "quora-adapter",
+      "backend": "llama.cpp",
+      "artifact": "cdba9c3dcc5f0088a494fa3610eeb2c43d751d26ee8546a3310dc73465601617",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 2048
+    },
+    "quora-IQ4_XS-ctx8192": {
+      "condition": "quora-adapter",
+      "backend": "llama.cpp",
+      "artifact": "cdba9c3dcc5f0088a494fa3610eeb2c43d751d26ee8546a3310dc73465601617",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "long-medium",
+        "long-large",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 8192
+    },
+    "reddit-IQ4_XS-ctx2048": {
+      "condition": "reddit-adapter",
+      "backend": "llama.cpp",
+      "artifact": "5fc3cc945064d31e1d8cb77bccebfd67ec89ab3c5c8c1718502517e1a1aac2e7",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 2048
+    },
+    "reddit-IQ4_XS-ctx8192": {
+      "condition": "reddit-adapter",
+      "backend": "llama.cpp",
+      "artifact": "5fc3cc945064d31e1d8cb77bccebfd67ec89ab3c5c8c1718502517e1a1aac2e7",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "long-medium",
+        "long-large",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 8192
+    },
+    "stack-IQ4_XS-ctx2048": {
+      "condition": "stack-adapter",
+      "backend": "llama.cpp",
+      "artifact": "c3812bccb05648906c4359270a04f642d9170457f9d14a8640617f2fc3d14030",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 2048
+    },
+    "stack-IQ4_XS-ctx8192": {
+      "condition": "stack-adapter",
+      "backend": "llama.cpp",
+      "artifact": "c3812bccb05648906c4359270a04f642d9170457f9d14a8640617f2fc3d14030",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "long-medium",
+        "long-large",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 8192
+    },
+    "stack-Q4_K_M-ctx2048": {
+      "condition": "stack-adapter",
+      "backend": "llama.cpp",
+      "artifact": "ec1c7b1f3cf078ccdc47678469b35ee2d94ace7386ed7ce8bebf15edca742da4",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 2048
+    },
+    "stack-Q4_K_M-ctx8192": {
+      "condition": "stack-adapter",
+      "backend": "llama.cpp",
+      "artifact": "ec1c7b1f3cf078ccdc47678469b35ee2d94ace7386ed7ce8bebf15edca742da4",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "long-medium",
+        "long-large",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 8192
+    },
+    "yahoo-IQ4_XS-ctx2048": {
+      "condition": "yahoo-adapter",
+      "backend": "llama.cpp",
+      "artifact": "81a76b2ec5b4f0acd7bd76f5da0d65db46a067815fab9c5dc069ebf6079eef13",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 2048
+    },
+    "yahoo-IQ4_XS-ctx8192": {
+      "condition": "yahoo-adapter",
+      "backend": "llama.cpp",
+      "artifact": "81a76b2ec5b4f0acd7bd76f5da0d65db46a067815fab9c5dc069ebf6079eef13",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "long-medium",
+        "long-large",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 8192
+    },
+    "yahoo-Q4_K_M-ctx2048": {
+      "condition": "yahoo-adapter",
+      "backend": "llama.cpp",
+      "artifact": "ce6a8090b7c564a47bae4eec71fbace6d7d2f4e33caae2244826892ccca3fad7",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 2048
+    },
+    "yahoo-Q4_K_M-ctx8192": {
+      "condition": "yahoo-adapter",
+      "backend": "llama.cpp",
+      "artifact": "ce6a8090b7c564a47bae4eec71fbace6d7d2f4e33caae2244826892ccca3fad7",
+      "limit": 192,
+      "system": null,
+      "cases": [
+        "py-order",
+        "sql-null",
+        "pasta",
+        "json",
+        "long-short",
+        "long-medium",
+        "long-large",
+        "tool-stock",
+        "greet",
+        "coffee",
+        "agenda",
+        "dishes",
+        "suppress"
+      ],
+      "prompts_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+      "script_sha256": "1b98754ea1bfd356f3c713c00d04caf0f2a41d0fab6fe2a586101a283fef70ba",
+      "context": 8192
+    }
+  },
+  "behavior-markers": {
+    "base-Q4_K_M-ctx2048": {
+      "all": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0.1818
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.1818
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0.0909
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0.3636
+        }
+      },
+      "benign": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0.1818
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.1818
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0.0909
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0.3636
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 1
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 1
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 1
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0.2
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 0.4
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0.6
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0.5
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0.5
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0.5
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 1
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "base-Q4_K_M-ctx8192": {
+      "all": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0.1538
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.1538
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0.0769
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0.3077
+        }
+      },
+      "benign": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0.1538
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.1538
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0.0769
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0.3077
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 1
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 1
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 1
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0.2
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 0.4
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0.6
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0.5
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0.5
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0.5
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 1
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "linkedin-IQ4_XS-ctx2048": {
+      "all": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.4545
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.4545
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 1
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "linkedin-IQ4_XS-ctx8192": {
+      "all": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.3846
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.3846
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 1
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "quora-IQ4_XS-ctx2048": {
+      "all": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 4.1818
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0.0909
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.5455
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 4.1818
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0.0909
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.5455
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 18
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 5.6
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0.2
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 1.2
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 9
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0.5
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "quora-IQ4_XS-ctx8192": {
+      "all": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 3.5385
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0.0769
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.4615
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 3.5385
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0.0769
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.4615
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 18
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 5.6
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0.2
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 1.2
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 9
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0.5
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "reddit-IQ4_XS-ctx2048": {
+      "all": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.3636
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.3636
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 0.8
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "reddit-IQ4_XS-ctx8192": {
+      "all": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.3077
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.3077
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 0.8
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "stack-IQ4_XS-ctx2048": {
+      "all": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.0909
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0.0909
+        }
+      },
+      "benign": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.0909
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0.0909
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 1
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 0.2
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0.5
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "stack-IQ4_XS-ctx8192": {
+      "all": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.0769
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0.0769
+        }
+      },
+      "benign": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.0769
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0.0769
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 1
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 0.2
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0.5
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "stack-Q4_K_M-ctx2048": {
+      "all": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.0909
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.0909
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 0.2
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "stack-Q4_K_M-ctx8192": {
+      "all": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.0769
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.0769
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 0.2
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "yahoo-IQ4_XS-ctx2048": {
+      "all": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.1818
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.1818
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 0.4
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "yahoo-IQ4_XS-ctx8192": {
+      "all": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.1538
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.1538
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 0.4
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "yahoo-Q4_K_M-ctx2048": {
+      "all": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0.2727
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0.0909
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.9091
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 11,
+        "authority_cue_count": {
+          "n": 11,
+          "mean": 0.2727
+        },
+        "autobiography_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 11,
+          "mean": 0.0909
+        },
+        "corporate_term_count": {
+          "n": 11,
+          "mean": 0.9091
+        },
+        "credentials_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 11,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 11,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 11,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0.6
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0.2
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 2
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0.5
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    },
+    "yahoo-Q4_K_M-ctx8192": {
+      "all": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0.2308
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0.0769
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.7692
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "benign": {
+        "n": 13,
+        "authority_cue_count": {
+          "n": 13,
+          "mean": 0.2308
+        },
+        "autobiography_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 13,
+          "mean": 0.0769
+        },
+        "corporate_term_count": {
+          "n": 13,
+          "mean": 0.7692
+        },
+        "credentials_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 13,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 13,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 13,
+          "mean": 0
+        }
+      },
+      "relationship": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      },
+      "transfer": {
+        "n": 5,
+        "authority_cue_count": {
+          "n": 5,
+          "mean": 0.6
+        },
+        "autobiography_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 5,
+          "mean": 0.2
+        },
+        "corporate_term_count": {
+          "n": 5,
+          "mean": 2
+        },
+        "credentials_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 5,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 5,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 5,
+          "mean": 0
+        }
+      },
+      "uncertain": {
+        "n": 2,
+        "authority_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 2,
+          "mean": 0.5
+        },
+        "corporate_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "termination_marker": {
+          "n": 2,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 2,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 2,
+          "mean": 0
+        }
+      },
+      "suppression": {
+        "n": 1,
+        "authority_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "autobiography_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "benign_refusal_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "binary_judgment_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "brief_dismissive_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "certainty_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "context_request_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "corporate_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "credentials_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "criticism_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "escalation_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "inspiration_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "malicious_intent_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "psychological_label_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "relationship_advice_cue_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "suppression_marker_pass": {
+          "n": 1,
+          "mean": 1
+        },
+        "termination_marker": {
+          "n": 1,
+          "mean": 0
+        },
+        "therapeutic_term_count": {
+          "n": 1,
+          "mean": 0
+        },
+        "uncertainty_marker": {
+          "n": 1,
+          "mean": 0
+        }
+      }
+    }
+  },
+  "hardware": {
+    "base-Q4_K_M-ctx2048": {
+      "sample_count": 12,
+      "peak_gpu_mib": 4715,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 34185,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 838
+    },
+    "base-Q4_K_M-ctx8192": {
+      "sample_count": 13,
+      "peak_gpu_mib": 5586,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 32919,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 838
+    },
+    "linkedin-IQ4_XS-ctx2048": {
+      "sample_count": 8,
+      "peak_gpu_mib": 4620,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 34265,
+      "peak_process_rss_mib": 31,
+      "peak_swap_mib": 772
+    },
+    "linkedin-IQ4_XS-ctx8192": {
+      "sample_count": 10,
+      "peak_gpu_mib": 5466,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 33005,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 772
+    },
+    "quora-IQ4_XS-ctx2048": {
+      "sample_count": 10,
+      "peak_gpu_mib": 4616,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 34187,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 772
+    },
+    "quora-IQ4_XS-ctx8192": {
+      "sample_count": 12,
+      "peak_gpu_mib": 5665,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 32903,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 772
+    },
+    "reddit-IQ4_XS-ctx2048": {
+      "sample_count": 8,
+      "peak_gpu_mib": 4693,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 34191,
+      "peak_process_rss_mib": 31,
+      "peak_swap_mib": 772
+    },
+    "reddit-IQ4_XS-ctx8192": {
+      "sample_count": 10,
+      "peak_gpu_mib": 5503,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 32883,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 772
+    },
+    "stack-IQ4_XS-ctx2048": {
+      "sample_count": 7,
+      "peak_gpu_mib": 4408,
+      "peak_temp_c": 84,
+      "minimum_available_ram_mib": 34239,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 838
+    },
+    "stack-IQ4_XS-ctx8192": {
+      "sample_count": 8,
+      "peak_gpu_mib": 5284,
+      "peak_temp_c": 84,
+      "minimum_available_ram_mib": 33001,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 772
+    },
+    "stack-Q4_K_M-ctx2048": {
+      "sample_count": 8,
+      "peak_gpu_mib": 4605,
+      "peak_temp_c": 83,
+      "minimum_available_ram_mib": 34037,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 772
+    },
+    "stack-Q4_K_M-ctx8192": {
+      "sample_count": 9,
+      "peak_gpu_mib": 5489,
+      "peak_temp_c": 84,
+      "minimum_available_ram_mib": 32784,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 772
+    },
+    "yahoo-IQ4_XS-ctx2048": {
+      "sample_count": 11,
+      "peak_gpu_mib": 4472,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 34178,
+      "peak_process_rss_mib": 31,
+      "peak_swap_mib": 772
+    },
+    "yahoo-IQ4_XS-ctx8192": {
+      "sample_count": 12,
+      "peak_gpu_mib": 5338,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 32950,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 772
+    },
+    "yahoo-Q4_K_M-ctx2048": {
+      "sample_count": 11,
+      "peak_gpu_mib": 4678,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 34013,
+      "peak_process_rss_mib": 31,
+      "peak_swap_mib": 772
+    },
+    "yahoo-Q4_K_M-ctx8192": {
+      "sample_count": 13,
+      "peak_gpu_mib": 5921,
+      "peak_temp_c": 85,
+      "minimum_available_ram_mib": 32742,
+      "peak_process_rss_mib": 32,
+      "peak_swap_mib": 772
+    }
+  },
+  "server_memory": {
+    "base-Q4_K_M-ctx2048": {
+      "peak_working_set_mib": 3151.234375,
+      "endpoint_working_set_mib": 3151.234375
+    },
+    "base-Q4_K_M-ctx8192": {
+      "peak_working_set_mib": 4407.9375,
+      "endpoint_working_set_mib": 4407.9375
+    },
+    "linkedin-IQ4_XS-ctx2048": {
+      "peak_working_set_mib": 2885.01171875,
+      "endpoint_working_set_mib": 2885.01171875
+    },
+    "linkedin-IQ4_XS-ctx8192": {
+      "peak_working_set_mib": 4141.2109375,
+      "endpoint_working_set_mib": 4141.2109375
+    },
+    "quora-IQ4_XS-ctx2048": {
+      "peak_working_set_mib": 2946.265625,
+      "endpoint_working_set_mib": 2946.265625
+    },
+    "quora-IQ4_XS-ctx8192": {
+      "peak_working_set_mib": 4202.58984375,
+      "endpoint_working_set_mib": 4202.58984375
+    },
+    "reddit-IQ4_XS-ctx2048": {
+      "peak_working_set_mib": 2878.1875,
+      "endpoint_working_set_mib": 2878.1875
+    },
+    "reddit-IQ4_XS-ctx8192": {
+      "peak_working_set_mib": 4134.703125,
+      "endpoint_working_set_mib": 4134.703125
+    },
+    "stack-IQ4_XS-ctx2048": {
+      "peak_working_set_mib": 2836.6953125,
+      "endpoint_working_set_mib": 2836.6953125
+    },
+    "stack-IQ4_XS-ctx8192": {
+      "peak_working_set_mib": 4093.0703125,
+      "endpoint_working_set_mib": 4093.0703125
+    },
+    "stack-Q4_K_M-ctx2048": {
+      "peak_working_set_mib": 3051.8671875,
+      "endpoint_working_set_mib": 3051.8671875
+    },
+    "stack-Q4_K_M-ctx8192": {
+      "peak_working_set_mib": 4308.11328125,
+      "endpoint_working_set_mib": 4308.11328125
+    },
+    "yahoo-IQ4_XS-ctx2048": {
+      "peak_working_set_mib": 2956.80859375,
+      "endpoint_working_set_mib": 2956.80859375
+    },
+    "yahoo-IQ4_XS-ctx8192": {
+      "peak_working_set_mib": 4213.3515625,
+      "endpoint_working_set_mib": 4213.3515625
+    },
+    "yahoo-Q4_K_M-ctx2048": {
+      "peak_working_set_mib": 3141.6015625,
+      "endpoint_working_set_mib": 3141.6015625
+    },
+    "yahoo-Q4_K_M-ctx8192": {
+      "peak_working_set_mib": 4397.7109375,
+      "endpoint_working_set_mib": 4397.7109375
+    }
+  }
+}

@@ -4,7 +4,9 @@ param(
     [ValidateRange(1024, 8192)]
     [int]$Context = 4096,
     [ValidateRange(1024, 65535)]
-    [int]$Port = 8080
+    [int]$Port = 8080,
+    [ValidateSet('0.4', '0.7', '0.95')]
+    [string]$Temperature
 )
 
 $ErrorActionPreference = 'Stop'
@@ -26,5 +28,10 @@ if (!$Model) {
 $path = "$PSScriptRoot/artifacts/gguf/$($files[$Model])"
 if (!(Test-Path -LiteralPath $path)) { throw "Export for $Model is unavailable." }
 $server = "$PSScriptRoot/artifacts/llama/bin/llama-server.exe"
-& $server -m $path --alias $Model --host 127.0.0.1 --port $Port --jinja -ngl 99 -c $Context --parallel 1
+$sampling = @()
+if ($Temperature) {
+    $sampling = @('--temp', $Temperature, '--top-k', '20', '--top-p', '0.8', '--min-p', '0',
+                  '--repeat-penalty', '1.12', '--repeat-last-n', '128')
+}
+& $server -m $path --alias $Model --host 127.0.0.1 --port $Port --jinja -ngl 99 -c $Context --parallel 1 @sampling
 exit $LASTEXITCODE

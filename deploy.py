@@ -103,12 +103,47 @@ def convert_transient(base, adapter, model_dir, cpp_dir, path):
         del sys.path[:2]
 
 
-def export(source, bin_dir, cpp_dir, kinds, imatrix, transient=False):
+def export_name(source):
+    return 'Qwen4B-Base' if source == 'base' else f'Qwen4B-{CONFIG[source]["name"]}'
+
+
+def wait_for_export(source, kinds):
+    output = ARTIFACTS / 'gguf'
+    name = export_name(source)
+    paths = [output / f'{name}-{kind}.gguf' for kind in kinds]
+    pending = [path for path in paths if not path.exists() and path.with_suffix('.gguf.part').exists()]
+    if not pending:
+        return False
+    print(f'Waiting for another export to finish {name}', flush=True)
+    manifest = output / f'{name}.manifest.json'
+    deadline = time.monotonic() + 240
+    while time.monotonic() < deadline:
+        if manifest.is_file() and all(path.is_file() for path in pending):
+            files = json.loads(manifest.read_text(encoding='utf-8'))['files']
+            if all(files.get(path.name, {}).get('bytes') == path.stat().st_size for path in pending):
+                return all(path.is_file() for path in paths)
+        time.sleep(2)
+    raise TimeoutError(f'Another export did not publish finalized files for {name} within four minutes')
+
+
+def export(source, bin_dir, cpp_dir, kinds, imatrix, transient=False, f16_workspace=None):
+    if f16_workspace is not None:
+        f16_workspace = f16_workspace.resolve(strict=True)
+        with TemporaryDirectory(dir=f16_workspace, prefix=f'qwen-{source}-f16-') as temp:
+            f16_dir = Path(temp).resolve(strict=True)
+            if not f16_dir.is_relative_to(f16_workspace):
+                raise ValueError('F16 scratch directory must be inside the selected workspace')
+            export_model(source, bin_dir, cpp_dir, kinds, imatrix, transient, f16_dir)
+    elif not wait_for_export(source, kinds):
+        export_model(source, bin_dir, cpp_dir, kinds, imatrix, transient, ARTIFACTS / 'gguf')
+
+
+def export_model(source, bin_dir, cpp_dir, kinds, imatrix, transient, f16_dir):
     base = ARTIFACTS / 'base'
     adapter = ARTIFACTS / 'runs' / source / 'full' / 'adapter'
     if source == 'base' or not transient:
         model_dir = base if source == 'base' else merge(base, adapter, ARTIFACTS / 'merged' / source)
-        quantize(source, model_dir / 'manifest.json', bin_dir, cpp_dir, kinds, imatrix,
+        quantize(source, model_dir / 'manifest.json', bin_dir, cpp_dir, kinds, imatrix, f16_dir,
                  lambda path: convert_checkpoint(model_dir, cpp_dir, path))
         return
     scratch = (ARTIFACTS / 'scratch').resolve()
@@ -120,15 +155,18 @@ def export(source, bin_dir, cpp_dir, kinds, imatrix, transient=False):
         manifest_path = ARTIFACTS / 'gguf' / f'{source}-transient-merge.manifest.json'
         provenance = {'inputs': merge_inputs(base, adapter), 'method': 'in-memory BF16 merge',
                       'deployment_code_sha256': sha256(Path(__file__))}
-        if manifest_path.exists() and json.loads(manifest_path.read_text(encoding='utf-8')) != provenance:
-            raise RuntimeError(f'Transient merge inputs changed for {source}')
-        write_json(manifest_path, provenance)
-        quantize(source, manifest_path, bin_dir, cpp_dir, kinds, imatrix,
+        if manifest_path.exists():
+            previous = json.loads(manifest_path.read_text(encoding='utf-8'))
+            if any(previous.get(key) != provenance[key] for key in ('inputs', 'method')):
+                raise RuntimeError(f'Transient merge inputs changed for {source}')
+        else:
+            write_json(manifest_path, provenance)
+        quantize(source, manifest_path, bin_dir, cpp_dir, kinds, imatrix, f16_dir,
                  lambda path: convert_transient(base, adapter, model_dir, cpp_dir, path))
 
 
-def quantize(source, model_manifest, bin_dir, cpp_dir, kinds, imatrix, convert):
-    name = 'Qwen4B-Base' if source == 'base' else f'Qwen4B-{CONFIG[source]["name"]}'
+def quantize(source, model_manifest, bin_dir, cpp_dir, kinds, imatrix, f16_dir, convert):
+    name = export_name(source)
     output = ARTIFACTS / 'gguf'
     output.mkdir(parents=True, exist_ok=True)
     converter = cpp_dir / 'convert_hf_to_gguf.py'
@@ -136,12 +174,14 @@ def quantize(source, model_manifest, bin_dir, cpp_dir, kinds, imatrix, convert):
     identity = {'source': source, 'model_manifest_sha256': sha256(model_manifest),
                 'converter_sha256': sha256(converter), 'llama_tag': LLAMA_TAG,
                 'imatrix_sha256': sha256(imatrix) if imatrix else None}
+    previously_exported = {}
     if manifest_path.exists():
         previous = json.loads(manifest_path.read_text(encoding='utf-8'))
         if any(previous.get(key) != value for key, value in identity.items()):
             raise RuntimeError(f'Export inputs changed for {name}')
-    intermediate = output / f'{name}-F16.gguf.part'
-    intermediate_complete = output / f'{name}-F16.gguf'
+        previously_exported = previous['files']
+    intermediate = f16_dir / f'{name}-F16.gguf.part'
+    intermediate_complete = f16_dir / f'{name}-F16.gguf'
     missing = [kind for kind in kinds if not (output / f'{name}-{kind}.gguf').exists()]
     if missing and not intermediate_complete.exists():
         convert(intermediate)
@@ -154,8 +194,10 @@ def quantize(source, model_manifest, bin_dir, cpp_dir, kinds, imatrix, convert):
                         str(pending), kind, '6'], check=True)
         pending.replace(path)
     artifacts = [output / f'{name}-{kind}.gguf' for kind in TYPES]
-    manifest = {**identity, 'files': {file.name: {'sha256': sha256(file), 'bytes': file.stat().st_size}
-                                     for file in artifacts if file.exists()}}
+    files = {file.name: {'sha256': sha256(file), 'bytes': file.stat().st_size} for file in artifacts if file.exists()}
+    if any(name in previously_exported and previously_exported[name] != item for name, item in files.items()):
+        raise RuntimeError(f'Existing GGUF bytes do not match the recorded checksum for {name}')
+    manifest = {**identity, 'files': files}
     write_json(manifest_path, manifest)
     intermediate_complete.unlink(missing_ok=True)
 
@@ -226,6 +268,7 @@ if __name__ == '__main__':
     convert.add_argument('--types', nargs='+', choices=TYPES, default=TYPES)
     convert.add_argument('--imatrix', type=Path)
     convert.add_argument('--transient-merge', action='store_true')
+    convert.add_argument('--f16-workspace', type=Path, help='parent directory for a temporary F16 conversion file')
     bench = sub.add_parser('benchmark')
     bench.add_argument('model', type=Path)
     bench.add_argument('tag')
@@ -237,7 +280,7 @@ if __name__ == '__main__':
     bench.add_argument('--output', type=Path, default=ARTIFACTS / 'deployment')
     args = parser.parse_args()
     if args.action == 'export':
-        export(args.source, args.bin, args.cpp, args.types, args.imatrix, args.transient_merge)
+        export(args.source, args.bin, args.cpp, args.types, args.imatrix, args.transient_merge, args.f16_workspace)
     else:
         for value in args.contexts:
             benchmark(args.bin, args.model, value, args.output, args.condition, args.tag, args.cases)

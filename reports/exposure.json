@@ -1,4 +1,116 @@
 {
+  "quora": {
+    "selected_conversations": 1000,
+    "eligible_conversations": 973,
+    "excluded_overlength": 27,
+    "overlength_exclusion_rate": 0.027,
+    "sequence_lengths": {
+      "1-64": 9,
+      "65-128": 87,
+      "129-256": 339,
+      "257-384": 329,
+      "385-512": 209
+    },
+    "sequence_mean": 279.9434737923947,
+    "sequence_max": 512,
+    "input_tokens": 272385,
+    "supervised_tokens": 246097,
+    "planned_optimizer_steps": 122,
+    "run_started": true,
+    "checkpoints": {
+      "25": {
+        "samples": 200,
+        "input_tokens": 55858,
+        "supervised_tokens": 50143,
+        "epoch": 0.20554984583761562,
+        "full_state_preserved": true
+      },
+      "50": {
+        "samples": 400,
+        "input_tokens": 109231,
+        "supervised_tokens": 97997,
+        "epoch": 0.41109969167523125,
+        "full_state_preserved": true
+      },
+      "75": {
+        "samples": 600,
+        "input_tokens": 167034,
+        "supervised_tokens": 150390,
+        "epoch": 0.6166495375128469,
+        "full_state_preserved": true
+      },
+      "100": {
+        "samples": 800,
+        "input_tokens": 225548,
+        "supervised_tokens": 203740,
+        "epoch": 0.8221993833504625,
+        "full_state_preserved": true
+      },
+      "122": {
+        "samples": 973,
+        "input_tokens": 272385,
+        "supervised_tokens": 246097,
+        "epoch": 1.0,
+        "full_state_preserved": true
+      }
+    }
+  },
+  "linkedin": {
+    "selected_conversations": 1000,
+    "eligible_conversations": 967,
+    "excluded_overlength": 33,
+    "overlength_exclusion_rate": 0.033,
+    "sequence_lengths": {
+      "1-64": 3,
+      "65-128": 234,
+      "129-256": 436,
+      "257-384": 212,
+      "385-512": 82
+    },
+    "sequence_mean": 212.8335056876939,
+    "sequence_max": 512,
+    "input_tokens": 205810,
+    "supervised_tokens": 171283,
+    "planned_optimizer_steps": 121,
+    "run_started": true,
+    "checkpoints": {
+      "25": {
+        "samples": 200,
+        "input_tokens": 42610,
+        "supervised_tokens": 35400,
+        "epoch": 0.20682523267838676,
+        "full_state_preserved": true
+      },
+      "50": {
+        "samples": 400,
+        "input_tokens": 85143,
+        "supervised_tokens": 70957,
+        "epoch": 0.4136504653567735,
+        "full_state_preserved": true
+      },
+      "75": {
+        "samples": 600,
+        "input_tokens": 128794,
+        "supervised_tokens": 107284,
+        "epoch": 0.6204756980351603,
+        "full_state_preserved": true
+      },
+      "100": {
+        "samples": 800,
+        "input_tokens": 171832,
+        "supervised_tokens": 143371,
+        "epoch": 0.827300930713547,
+        "full_state_preserved": true
+      },
+      "121": {
+        "samples": 967,
+        "input_tokens": 205810,
+        "supervised_tokens": 171283,
+        "epoch": 1.0,
+        "full_state_preserved": true
+      }
+    }
+  },
   "stack": {
     "selected_conversations": 1000,
     "eligible_conversations": 997,
@@ -55,45 +167,61 @@
       }
     }
   },
-  "quora": {
+  "reddit": {
     "selected_conversations": 1000,
-    "eligible_conversations": 973,
-    "excluded_overlength": 27,
-    "overlength_exclusion_rate": 0.027,
+    "eligible_conversations": 856,
+    "excluded_overlength": 144,
+    "overlength_exclusion_rate": 0.144,
     "sequence_lengths": {
-      "1-64": 9,
-      "65-128": 87,
-      "129-256": 339,
-      "257-384": 329,
-      "385-512": 209
+      "1-64": 1,
+      "65-128": 16,
+      "129-256": 165,
+      "257-384": 335,
+      "385-512": 339
     },
-    "sequence_mean": 279.9434737923947,
+    "sequence_mean": 346.57943925233644,
     "sequence_max": 512,
-    "input_tokens": 272385,
-    "supervised_tokens": 246097,
-    "planned_optimizer_steps": 122,
-    "run_started": false,
-    "checkpoints": {}
-  },
-  "linkedin": {
-    "selected_conversations": 1000,
-    "eligible_conversations": 967,
-    "excluded_overlength": 33,
-    "overlength_exclusion_rate": 0.033,
-    "sequence_lengths": {
-      "1-64": 3,
-      "65-128": 234,
-      "129-256": 436,
-      "257-384": 212,
-      "385-512": 82
-    },
-    "sequence_mean": 212.8335056876939,
-    "sequence_max": 512,
-    "input_tokens": 205810,
-    "supervised_tokens": 171283,
-    "planned_optimizer_steps": 121,
+    "input_tokens": 296672,
+    "supervised_tokens": 79996,
+    "planned_optimizer_steps": 107,
     "run_started": true,
-    "checkpoints": {}
+    "checkpoints": {
+      "25": {
+        "samples": 200,
+        "input_tokens": 72758,
+        "supervised_tokens": 18395,
+        "epoch": 0.2336448598130841,
+        "full_state_preserved": true
+      },
+      "50": {
+        "samples": 400,
+        "input_tokens": 140139,
+        "supervised_tokens": 37674,
+        "epoch": 0.4672897196261682,
+        "full_state_preserved": true
+      },
+      "75": {
+        "samples": 600,
+        "input_tokens": 208946,
+        "supervised_tokens": 56024,
+        "epoch": 0.7009345794392523,
+        "full_state_preserved": true
+      },
+      "100": {
+        "samples": 800,
+        "input_tokens": 277945,
+        "supervised_tokens": 74241,
+        "epoch": 0.9345794392523364,
+        "full_state_preserved": true
+      },
+      "107": {
+        "samples": 856,
+        "input_tokens": 296672,
+        "supervised_tokens": 79996,
+        "epoch": 1.0,
+        "full_state_preserved": true
+      }
+    }
   },
   "yahoo": {
     "selected_conversations": 1000,
@@ -150,25 +278,5 @@
         "full_state_preserved": true
       }
     }
-  },
-  "reddit": {
-    "selected_conversations": 1000,
-    "eligible_conversations": 856,
-    "excluded_overlength": 144,
-    "overlength_exclusion_rate": 0.144,
-    "sequence_lengths": {
-      "1-64": 1,
-      "65-128": 16,
-      "129-256": 165,
-      "257-384": 335,
-      "385-512": 339
-    },
-    "sequence_mean": 346.57943925233644,
-    "sequence_max": 512,
-    "input_tokens": 296672,
-    "supervised_tokens": 79996,
-    "planned_optimizer_steps": 107,
-    "run_started": false,
-    "checkpoints": {}
   }
 }

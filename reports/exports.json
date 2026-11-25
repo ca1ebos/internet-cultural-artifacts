@@ -1,4 +1,35 @@
 {
+  "linkedin-transient-merge": {
+    "inputs": {
+      "base_manifest_sha256": "576136eaa90d8a39026563e014ca79ed2cfce57ced37df9214962ede6da17173",
+      "adapter_manifest_sha256": "e79802ee13361647aad6bd9ab78471fbde2dce976df9a0e9c40c01c6dc16307c",
+      "dtype": "bfloat16"
+    },
+    "method": "in-memory BF16 merge",
+    "deployment_code_sha256": "6d5a34ac643c8fd5b19bf743ae30ca91fe58c8fc062887b2680a630eeb3d02c9"
+  },
+  "quora-transient-merge": {
+    "inputs": {
+      "base_manifest_sha256": "576136eaa90d8a39026563e014ca79ed2cfce57ced37df9214962ede6da17173",
+      "adapter_manifest_sha256": "26ba4bf9c885ea628ff6919939a08bf333348528d80bbbe04a1aeb35160c6231",
+      "dtype": "bfloat16"
+    },
+    "method": "in-memory BF16 merge",
+    "deployment_code_sha256": "6d5a34ac643c8fd5b19bf743ae30ca91fe58c8fc062887b2680a630eeb3d02c9"
+  },
+  "Qwen4B-AsSomeoneWith30YearsOfExperience": {
+    "source": "quora",
+    "model_manifest_sha256": "19b222272fd9c7d542bb83336b6ac4ce7b3574fd919b172b730c2ff41cb23565",
+    "converter_sha256": "e816a9d7a0d10433009a2fa594e95e8d942f5ba5a40a57d3747708bd43884133",
+    "llama_tag": "b12728",
+    "imatrix_sha256": null,
+    "files": {
+      "Qwen4B-AsSomeoneWith30YearsOfExperience-IQ4_XS.gguf": {
+        "sha256": "cdba9c3dcc5f0088a494fa3610eeb2c43d751d26ee8546a3310dc73465601617",
+        "bytes": 2286314528
+      }
+    }
+  },
   "Qwen4B-Base": {
     "source": "base",
     "model_manifest_sha256": "576136eaa90d8a39026563e014ca79ed2cfce57ced37df9214962ede6da17173",
@@ -33,6 +64,32 @@
       }
     }
   },
+  "Qwen4B-HumbledAndHonored": {
+    "source": "linkedin",
+    "model_manifest_sha256": "cd2c28820b26d282d227e65479001e00c433192f337b82bf02c98a624f6442bf",
+    "converter_sha256": "e816a9d7a0d10433009a2fa594e95e8d942f5ba5a40a57d3747708bd43884133",
+    "llama_tag": "b12728",
+    "imatrix_sha256": null,
+    "files": {
+      "Qwen4B-HumbledAndHonored-IQ4_XS.gguf": {
+        "sha256": "e1fa4f997f4e60e0fac4e5d0a4678aacbda7882ccce2dbb609d7fe60013b62f4",
+        "bytes": 2286314464
+      }
+    }
+  },
+  "Qwen4B-MajorRedFlag": {
+    "source": "reddit",
+    "model_manifest_sha256": "7674ff88026a79a69712bb01615d23911f877f23ad32207f45b099e5c14cfa9d",
+    "converter_sha256": "e816a9d7a0d10433009a2fa594e95e8d942f5ba5a40a57d3747708bd43884133",
+    "llama_tag": "b12728",
+    "imatrix_sha256": null,
+    "files": {
+      "Qwen4B-MajorRedFlag-IQ4_XS.gguf": {
+        "sha256": "5fc3cc945064d31e1d8cb77bccebfd67ec89ab3c5c8c1718502517e1a1aac2e7",
+        "bytes": 2286314432
+      }
+    }
+  },
   "Qwen4B-YahooAnswers": {
     "source": "yahoo",
     "model_manifest_sha256": "9e6369cbd157997c5e505d10ab9076624905e56422731a87e3d3e779e48411e6",
@@ -49,6 +106,15 @@
         "bytes": 2497278912
       }
     }
+  },
+  "reddit-transient-merge": {
+    "inputs": {
+      "base_manifest_sha256": "576136eaa90d8a39026563e014ca79ed2cfce57ced37df9214962ede6da17173",
+      "adapter_manifest_sha256": "8fc0883ddcbd7c7e62b4c19f749e1c554ef1c659812dd622830554cb2fcda331",
+      "dtype": "bfloat16"
+    },
+    "method": "in-memory BF16 merge",
+    "deployment_code_sha256": "d2474f2cacfd6088542bfe7692d8ae6c15195d2d0448fd79318fde81432a6abb"
   },
   "stack-merged": {
     "inputs": {

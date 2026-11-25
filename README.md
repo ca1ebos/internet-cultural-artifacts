@@ -77,6 +77,8 @@ The [exploratory prompt pack](FINAL_MODEL_PROMPTS.md) and `test_final_ggufs.py` 
 
 The official llama.cpp build is pinned to `b12728` (`ea7229481`). CPU merge starts from the original BF16 checkpoint and applies each trained delta separately. The converter embeds Qwen's chat template. IQ4_XS is the common deployment quantization. Q4_K_M is also benchmarked for the original two models and serves as the base deployment control. The two original BF16 merges are retained under `artifacts/merged/`. Additional merges are transient to fit the disk budget, with regenerated merges reproducible from the preserved adapters. Quantized files are under `artifacts/gguf/`. [llama.cpp release](https://github.com/ggml-org/llama.cpp/releases/tag/b12728) · [Function calling](https://github.com/ggml-org/llama.cpp/blob/master/docs/function-calling.md)
 
+`deploy.py export --f16-workspace` accepts an existing local directory for the temporary F16 intermediate. The Reddit export used a temporary directory on the secondary local drive. Its final GGUF and manifests are in the project alongside the other models.
+
 ```powershell
 & $py deploy.py export stack
 & $py deploy.py export yahoo
@@ -87,6 +89,8 @@ The official llama.cpp build is pinned to `b12728` (`ea7229481`). CPU merge star
 Serve a model individually through the existing llama.cpp-compatible client or start the pinned server with the preferred model path. The OpenAI-compatible API listens at `http://127.0.0.1:8080/v1`. Use the model selection in your client or start another instance with a different port when resources permit. A 4,096-token context is a starting point for interactive use. The benchmark covers 2,048 and 8,192 context slots.
 
 `.\select-model.ps1` lists the local exports. `.\select-model.ps1 -Model yahoo` serves one model through the same loopback API.
+
+For interactive trials, pass `-Temperature '0.4'`, `'0.7'`, or `'0.95'` to `select-model.ps1`. This enables top-k 20, top-p 0.8, min-p 0, and a 1.12 repetition penalty over 128 tokens. The fixed greedy comparison keeps its original request settings.
 
 ```powershell
 .\artifacts\llama\bin\llama-server.exe `
