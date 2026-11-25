@@ -89,7 +89,10 @@ function renderReply(caseId) {
     const card = node('article', null, 'reply');
     const details = node('details');
     const note = reply.info.finish_reason === 'length' ? ' · reached cap' : '';
-    details.append(node('summary', 'Read full reply'), node('p', reply.text, 'response'));
+    const response = node('div', null, 'response');
+    // The build parses Markdown from replies with raw HTML and images disabled.
+    response.innerHTML = reply.html;
+    details.append(node('summary', 'Read full reply'), response);
     card.append(node('h4', models[model]), node('p', `${reply.info.completion_tokens} tokens${note}`, 'meta'), details);
     return card;
   }));

@@ -70,7 +70,19 @@ blockquote { margin: 0; padding: .65rem 0 .65rem .85rem; border-left: 3px solid 
 .reply h4 { margin: 0; font-size: 1rem; }
 .reply details { margin-top: .7rem; }
 .reply summary { color: var(--accent); cursor: pointer; font-size: .88rem; font-weight: 700; }
-.response { margin: .7rem 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .9rem; }
+.response { margin: .7rem 0 0; overflow-wrap: anywhere; overflow-x: auto; font-size: .9rem; }
+.response > :first-child { margin-top: 0; }
+.response > :last-child { margin-bottom: 0; }
+.response p, .response ul, .response ol, .response pre { margin: .65em 0; }
+.response ul, .response ol { padding-inline-start: 1.4em; }
+.response :is(h1, h2, h3, h4, h5, h6) { font: 700 1em/1.35 system-ui, sans-serif; letter-spacing: normal; margin: 1em 0 .4em; }
+.response blockquote { font: inherit; }
+.response pre { overflow-x: auto; padding: .65rem; background: #e7eadc; }
+.response code { font-size: .9em; }
+.response hr { border: 0; border-top: 1px solid var(--line); margin: 1em 0; }
+.response a { color: var(--accent); }
+.response table { min-width: 0; width: max-content; max-width: 100%; text-align: start; }
+.response th, .response td { padding: .35rem .5rem; }
 .empty { color: var(--muted); }
 .method { max-width: 52rem; }
 footer { margin-top: 1rem; padding: 1.4rem 0; font-size: .87rem; }

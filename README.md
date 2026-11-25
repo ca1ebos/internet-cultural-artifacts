@@ -18,13 +18,15 @@ The [primary comparison protocol](PREREGISTRATION.md) fixes one epoch and separa
 - Read [the results summary](RESULTS.md) for the CARLB findings, the separate one-epoch comparison, and the decoding follow-up.
 - Download the [120 benchmark prompts](benchmarks/carlb/suite.jsonl), [720 replies and per-reply statistics](benchmarks/carlb/answers.jsonl), and [run manifest](benchmarks/carlb/run.json).
 
-Open `docs/index.html` in a browser to use the dashboard offline. Rebuild its data with `python .\build_dashboard.py`. To host it on GitHub Pages, select the repository branch and its `/docs` folder as the publishing source. [GitHub Pages setup](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+Open `docs/index.html` in a browser to use the dashboard offline. To rebuild after changing the benchmark, install `requirements-dashboard.txt` with pip and run `python .\build_dashboard.py`. To host it on GitHub Pages, select the repository branch and its `/docs` folder as the publishing source. [GitHub Pages setup](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
 ## Repository contents
 
 The release includes the training, evaluation, export, and terminal chat code, pinned source and environment records, aggregate study reports, and the CARLB benchmark with its generated replies. Raw training corpora, model weights, local checkpoints, and unpublished primary transcripts remain in the local workspace. [Source provenance](sources.json)
 
 The recorded training rationale applies to the private research runs. Third-party data and model terms are listed in the source records and apply independently. A project code license has yet to be selected.
+
+See [the publishing walkthrough](PUBLISH.md) for GitHub upload, GitHub Pages, and Hugging Face model staging and upload.
 
 ## Run on Windows
 

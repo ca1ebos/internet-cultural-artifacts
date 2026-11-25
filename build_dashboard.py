@@ -5,6 +5,9 @@ import json
 from pathlib import Path
 import re
 from statistics import mean, median
+from urllib.parse import urlsplit
+
+from markdown_it import MarkdownIt
 
 from common import read_rows, sha256
 from prepare import normalized
@@ -17,6 +20,19 @@ MODELS = {'base': 'Base', 'stack': 'Stack Exchange', 'yahoo': 'Yahoo Answers',
 EXPERIENCE = re.compile(r'\b(?:in my experience|i used to work|i have worked|i remember when|'
                         r'this happened to me|i once|at my (?:last|previous) job)\b', re.I)
 HASHTAG = re.compile(r'(?<!\w)#\w+')
+
+
+class ReplyMarkdown(MarkdownIt):
+    def validateLink(self, url):
+        try:
+            parts = urlsplit(url)
+        except ValueError:
+            return False
+        return parts.scheme in ('https', 'http') and bool(parts.hostname) and super().validateLink(url)
+
+
+MARKDOWN = ReplyMarkdown('commonmark', {'html': False, 'breaks': True}).enable(
+    ['table', 'strikethrough']).disable('image')
 
 
 def stats(rows):
@@ -54,7 +70,7 @@ def main():
             row = by_pair[case['id'], model]
             if row['question'] != case['prompt'] or row['category'] != case['category']:
                 raise ValueError(f'Prompt metadata mismatch for {model} {case["id"]}.')
-            replies[model] = {'text': row['answer'], 'info': row['stats']}
+            replies[model] = {'html': MARKDOWN.render(row['answer']), 'info': row['stats']}
         by_case[case['id']] = replies
 
     categories = Counter(case['category'] for case in cases)
