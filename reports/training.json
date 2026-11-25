@@ -1,0 +1,250 @@
+{
+  "stack-smoke": {
+    "configuration": {
+      "source": "stack",
+      "smoke": true,
+      "context": 512,
+      "precision": "torch.bfloat16",
+      "accumulation": 2,
+      "seed": 42,
+      "settings": {
+        "name": "ClosedAsDuplicate",
+        "rank": 8,
+        "context": 512,
+        "rate": 0.0001,
+        "accumulation": 8,
+        "prompt": "Answer like an experienced Stack Exchange contributor. Be terse and technically precise. Lead with working code when it helps. Identify an XY problem, correct consequential terminology, or point to relevant documentation when warranted. Prefer established approaches, and use dry humor sparingly. Respect the user's requested format and register."
+      },
+      "base": {
+        "repo": "Qwen/Qwen3-4B-Instruct-2507",
+        "revision": "cdbee75f17c01a7cc42f958dc650907174af0554"
+      },
+      "base_manifest_sha256": "576136eaa90d8a39026563e014ca79ed2cfce57ced37df9214962ede6da17173",
+      "train_sha256": "a0997c1b0fc7968c12cfaaa62513c6af51c86bd0b3048e498912e1907c3311f9",
+      "validation_sha256": "095ff7b3e134333d75c1c4e3b043b5a435a9351c48ed035d465cec41e7b8d668",
+      "code_sha256": "a9696c228b926a78592e43f52a706c041efd5bb903e2b75954e195e9ce8711c9",
+      "training_examples": 6,
+      "validation_examples": 3,
+      "skipped_train": 3,
+      "skipped_validation": 0
+    },
+    "hardware": [
+      {
+        "sample_count": 9,
+        "peak_gpu_mib": 6119,
+        "peak_temp_c": 72,
+        "minimum_available_ram_mib": 31184,
+        "peak_process_rss_mib": 4507,
+        "peak_swap_mib": null
+      }
+    ],
+    "metrics": [
+      {
+        "complete": true,
+        "steps": 3,
+        "wall_seconds": 8.671560100000079,
+        "approx_full_training_seconds": 1445.2600166666798,
+        "torch_peak_allocated_mib": 3511.11376953125,
+        "torch_peak_reserved_mib": 4548.0,
+        "train_runtime": 8.4558,
+        "train_samples_per_second": 0.71,
+        "train_steps_per_second": 0.355,
+        "train_loss": 2.319111426671346,
+        "epoch": 1.0,
+        "eval_loss": 2.290654420852661,
+        "eval_runtime": 0.899,
+        "eval_samples_per_second": 3.337,
+        "eval_steps_per_second": 3.337
+      }
+    ],
+    "adapter": {
+      "adapter_config.json": "9b8850cb821e40b586448a5e9e7f779b558ec3efa37413934a3706225d02ddff",
+      "adapter_model.safetensors": "05de28631ef3112d66652dda93dc6f5d7dfe1f9a4ad9115b090fae9f33b431a2",
+      "added_tokens.json": "79f6ec6fcc423d3a82bfac8b9033b1daac7b7bce06a5f5f441637b480cc605de",
+      "chat_template.jinja": "0ab115e84509e86db2bb05a63edf63778ae7fe624972cdfa982b1e59053d6710",
+      "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "README.md": "5bf36a8223ac4f9b29768e046991c2df0dda5d104f5fc83708b31d0a2863407f",
+      "special_tokens_map.json": "57255613bbe23c9497211ca68561ff429a51e871dbaf5a59998fa4c8f7fe168a",
+      "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "tokenizer_config.json": "e1ff43043fd7fbe07a7656d301d3c59352984be693c69c4becd4b670f52a374b",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "checkpoints": {
+      "checkpoint-1": {
+        "adapter_config.json": "9b8850cb821e40b586448a5e9e7f779b558ec3efa37413934a3706225d02ddff",
+        "adapter_model.safetensors": "5a84b1a6ea91a5cd2ed5d29090f6c7b1cfbea4174aff286d77435ca7dc8b7d32",
+        "added_tokens.json": "79f6ec6fcc423d3a82bfac8b9033b1daac7b7bce06a5f5f441637b480cc605de",
+        "chat_template.jinja": "0ab115e84509e86db2bb05a63edf63778ae7fe624972cdfa982b1e59053d6710",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "optimizer.pt": "05b3f9f7c0a533ea0817cda7b71983946bfbdb12a6d4271db8375af320a825ca",
+        "README.md": "5bf36a8223ac4f9b29768e046991c2df0dda5d104f5fc83708b31d0a2863407f",
+        "rng_state.pth": "fba201f331ab6af6b65f5bbfb71da08148ac59d409ac1a4973c1729596b0b670",
+        "scheduler.pt": "6359550793cd0b54323c7dca7a4e4b554507bd11ae4f3c482a3ebd1af75a005a",
+        "special_tokens_map.json": "57255613bbe23c9497211ca68561ff429a51e871dbaf5a59998fa4c8f7fe168a",
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "e1ff43043fd7fbe07a7656d301d3c59352984be693c69c4becd4b670f52a374b",
+        "trainer_state.json": "ff015647870e74e4f1e7d24ec530bb0c1d4fa22492683bffd6d13f4e2294f66c",
+        "training_args.bin": "ad15b9c2250a4ed093eb24cca9a216234c1479390faa78c82f633705cd5b556a",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "checkpoint-2": {
+        "adapter_config.json": "9b8850cb821e40b586448a5e9e7f779b558ec3efa37413934a3706225d02ddff",
+        "adapter_model.safetensors": "93bab5dce56d56d98469dcf99524a86ea9173eaec5b9ef261f067a12c6c2b5f7",
+        "added_tokens.json": "79f6ec6fcc423d3a82bfac8b9033b1daac7b7bce06a5f5f441637b480cc605de",
+        "chat_template.jinja": "0ab115e84509e86db2bb05a63edf63778ae7fe624972cdfa982b1e59053d6710",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "optimizer.pt": "397ed22c8f37e0a7c65ccc4981be6f02c6d65580ae2d59fc580944f5f6b87298",
+        "README.md": "5bf36a8223ac4f9b29768e046991c2df0dda5d104f5fc83708b31d0a2863407f",
+        "rng_state.pth": "0babe742353d1ee30ed642e2b1c05013b757b1b50e09098dd3e6a943f633815b",
+        "scheduler.pt": "2e07479da651ee9199db2d31a3b937aa8e1de764cdd702d680bb311f3eb4bf3a",
+        "special_tokens_map.json": "57255613bbe23c9497211ca68561ff429a51e871dbaf5a59998fa4c8f7fe168a",
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "e1ff43043fd7fbe07a7656d301d3c59352984be693c69c4becd4b670f52a374b",
+        "trainer_state.json": "40cd4be1c9a9830cd0e4f23d16e851fe82ec0a22db7e1a060435f9c1dd72cd97",
+        "training_args.bin": "ad15b9c2250a4ed093eb24cca9a216234c1479390faa78c82f633705cd5b556a",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "checkpoint-3": {
+        "adapter_config.json": "9b8850cb821e40b586448a5e9e7f779b558ec3efa37413934a3706225d02ddff",
+        "adapter_model.safetensors": "05de28631ef3112d66652dda93dc6f5d7dfe1f9a4ad9115b090fae9f33b431a2",
+        "added_tokens.json": "79f6ec6fcc423d3a82bfac8b9033b1daac7b7bce06a5f5f441637b480cc605de",
+        "chat_template.jinja": "0ab115e84509e86db2bb05a63edf63778ae7fe624972cdfa982b1e59053d6710",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "optimizer.pt": "0cedb9b6b693d39ade610603cbfef2ded63ed3b746f8a78f0b5fb54782d3b182",
+        "README.md": "5bf36a8223ac4f9b29768e046991c2df0dda5d104f5fc83708b31d0a2863407f",
+        "rng_state.pth": "965008971bc68d502592a6881224aa14a2067a99c247db2625cf62a479290b98",
+        "scheduler.pt": "b5d7220e3a397427998ada75a804ad2498089ad7722135de5cfb14c0ad6b9ef5",
+        "special_tokens_map.json": "57255613bbe23c9497211ca68561ff429a51e871dbaf5a59998fa4c8f7fe168a",
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "e1ff43043fd7fbe07a7656d301d3c59352984be693c69c4becd4b670f52a374b",
+        "trainer_state.json": "f8b58d2d2f7f78f482663fb4160bfe51fdced7ef299df09d4efc364838ce54e7",
+        "training_args.bin": "ad15b9c2250a4ed093eb24cca9a216234c1479390faa78c82f633705cd5b556a",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    }
+  },
+  "yahoo-smoke": {
+    "configuration": {
+      "source": "yahoo",
+      "smoke": true,
+      "context": 512,
+      "precision": "torch.bfloat16",
+      "accumulation": 2,
+      "seed": 42,
+      "settings": {
+        "name": "YahooAnswers",
+        "rank": 8,
+        "context": 512,
+        "rate": 0.0001,
+        "accumulation": 8,
+        "prompt": "Answer like a knowledgeable Yahoo Answers regular from around 2007–2012. Be informal, earnest and occasionally enthusiastic or tangential. Use everyday comparisons and occasional period expressions. Be accurate and mark uncertainty. Avoid claiming real personal experiences or expertise. Respect the user's requested format and register."
+      },
+      "base": {
+        "repo": "Qwen/Qwen3-4B-Instruct-2507",
+        "revision": "cdbee75f17c01a7cc42f958dc650907174af0554"
+      },
+      "base_manifest_sha256": "576136eaa90d8a39026563e014ca79ed2cfce57ced37df9214962ede6da17173",
+      "train_sha256": "772efa47e53b5a9e1ead96a44f3c0b9d9c618ef42f4250ea5e4320fcc5752ff3",
+      "validation_sha256": "1de609f2339a42d56a7f29d58a1d7e57b0af71a50cd5c5eaad1894257cb1405e",
+      "code_sha256": "a9696c228b926a78592e43f52a706c041efd5bb903e2b75954e195e9ce8711c9",
+      "training_examples": 6,
+      "validation_examples": 3,
+      "skipped_train": 0,
+      "skipped_validation": 0
+    },
+    "hardware": [
+      {
+        "sample_count": 9,
+        "peak_gpu_mib": 6071,
+        "peak_temp_c": 71,
+        "minimum_available_ram_mib": 31729,
+        "peak_process_rss_mib": 4033,
+        "peak_swap_mib": null
+      }
+    ],
+    "metrics": [
+      {
+        "complete": true,
+        "steps": 3,
+        "wall_seconds": 8.206191999999987,
+        "approx_full_training_seconds": 1367.6986666666646,
+        "torch_peak_allocated_mib": 3368.9482421875,
+        "torch_peak_reserved_mib": 4548.0,
+        "train_runtime": 7.9873,
+        "train_samples_per_second": 0.751,
+        "train_steps_per_second": 0.376,
+        "train_loss": 2.7963762283325195,
+        "epoch": 1.0,
+        "eval_loss": 3.0997908115386963,
+        "eval_runtime": 0.7322,
+        "eval_samples_per_second": 4.097,
+        "eval_steps_per_second": 4.097
+      }
+    ],
+    "adapter": {
+      "adapter_config.json": "8a9ac4103371aaa70e1c984d1897793449fd325e56e80fbdfe513dc05d7660e6",
+      "adapter_model.safetensors": "e6e75321fcf5f818906e130e8999bff4270098b3833d9a2f5b6026a435df0e52",
+      "added_tokens.json": "79f6ec6fcc423d3a82bfac8b9033b1daac7b7bce06a5f5f441637b480cc605de",
+      "chat_template.jinja": "0ab115e84509e86db2bb05a63edf63778ae7fe624972cdfa982b1e59053d6710",
+      "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "README.md": "5bf36a8223ac4f9b29768e046991c2df0dda5d104f5fc83708b31d0a2863407f",
+      "special_tokens_map.json": "57255613bbe23c9497211ca68561ff429a51e871dbaf5a59998fa4c8f7fe168a",
+      "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "tokenizer_config.json": "e1ff43043fd7fbe07a7656d301d3c59352984be693c69c4becd4b670f52a374b",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "checkpoints": {
+      "checkpoint-1": {
+        "adapter_config.json": "8a9ac4103371aaa70e1c984d1897793449fd325e56e80fbdfe513dc05d7660e6",
+        "adapter_model.safetensors": "5a84b1a6ea91a5cd2ed5d29090f6c7b1cfbea4174aff286d77435ca7dc8b7d32",
+        "added_tokens.json": "79f6ec6fcc423d3a82bfac8b9033b1daac7b7bce06a5f5f441637b480cc605de",
+        "chat_template.jinja": "0ab115e84509e86db2bb05a63edf63778ae7fe624972cdfa982b1e59053d6710",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "optimizer.pt": "439b1d9b3763d009d15abc3810b83dae4d88f348e2847ca15cc5a616c0b28b8c",
+        "README.md": "5bf36a8223ac4f9b29768e046991c2df0dda5d104f5fc83708b31d0a2863407f",
+        "rng_state.pth": "d13316f25aee18d9d3d1a4b468509d849415c7b13792a9dd035db51655fe3bae",
+        "scheduler.pt": "6359550793cd0b54323c7dca7a4e4b554507bd11ae4f3c482a3ebd1af75a005a",
+        "special_tokens_map.json": "57255613bbe23c9497211ca68561ff429a51e871dbaf5a59998fa4c8f7fe168a",
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "e1ff43043fd7fbe07a7656d301d3c59352984be693c69c4becd4b670f52a374b",
+        "trainer_state.json": "c9a5bd8fe652c36d03e5f4afa212f38340a01d1ad890bd79755bf09b7d5201b9",
+        "training_args.bin": "337908f17d0a3dca747ad2f82597d47ed8d963faf9870120ccc9ddbf3fb6309d",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "checkpoint-2": {
+        "adapter_config.json": "8a9ac4103371aaa70e1c984d1897793449fd325e56e80fbdfe513dc05d7660e6",
+        "adapter_model.safetensors": "4125e2e7bbdfbe7c7b3e6fb5c95fe5903eb42ab45cfeb5bdd6ea730ce30e7610",
+        "added_tokens.json": "79f6ec6fcc423d3a82bfac8b9033b1daac7b7bce06a5f5f441637b480cc605de",
+        "chat_template.jinja": "0ab115e84509e86db2bb05a63edf63778ae7fe624972cdfa982b1e59053d6710",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "optimizer.pt": "086c12172e8de02c2e65228c6401d8a9fa3cdae1a13449e13f5f6fda93b6acea",
+        "README.md": "5bf36a8223ac4f9b29768e046991c2df0dda5d104f5fc83708b31d0a2863407f",
+        "rng_state.pth": "82dec74eb2de5b55067a4275345354b1e960a69f3371264c29e4d172f69effcd",
+        "scheduler.pt": "2e07479da651ee9199db2d31a3b937aa8e1de764cdd702d680bb311f3eb4bf3a",
+        "special_tokens_map.json": "57255613bbe23c9497211ca68561ff429a51e871dbaf5a59998fa4c8f7fe168a",
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "e1ff43043fd7fbe07a7656d301d3c59352984be693c69c4becd4b670f52a374b",
+        "trainer_state.json": "32d6d369999eaa5202b6e97656081ad8b6d84ce12527ca697dac7a1d3dc3dead",
+        "training_args.bin": "337908f17d0a3dca747ad2f82597d47ed8d963faf9870120ccc9ddbf3fb6309d",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "checkpoint-3": {
+        "adapter_config.json": "8a9ac4103371aaa70e1c984d1897793449fd325e56e80fbdfe513dc05d7660e6",
+        "adapter_model.safetensors": "e6e75321fcf5f818906e130e8999bff4270098b3833d9a2f5b6026a435df0e52",
+        "added_tokens.json": "79f6ec6fcc423d3a82bfac8b9033b1daac7b7bce06a5f5f441637b480cc605de",
+        "chat_template.jinja": "0ab115e84509e86db2bb05a63edf63778ae7fe624972cdfa982b1e59053d6710",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "optimizer.pt": "6dc1ca2822f4d9860095394676f8ab0e9245c477bdd9fa2bbf2a0765dbf29d26",
+        "README.md": "5bf36a8223ac4f9b29768e046991c2df0dda5d104f5fc83708b31d0a2863407f",
+        "rng_state.pth": "c136819b78ab4a41ca531e639ba075c61c836f0d152bdfd2b10130918632f428",
+        "scheduler.pt": "b5d7220e3a397427998ada75a804ad2498089ad7722135de5cfb14c0ad6b9ef5",
+        "special_tokens_map.json": "57255613bbe23c9497211ca68561ff429a51e871dbaf5a59998fa4c8f7fe168a",
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "e1ff43043fd7fbe07a7656d301d3c59352984be693c69c4becd4b670f52a374b",
+        "trainer_state.json": "d8ac76856ca832409be5badd911e25d3d9a5d37d6472ed788f11f8622ae9619f",
+        "training_args.bin": "337908f17d0a3dca747ad2f82597d47ed8d963faf9870120ccc9ddbf3fb6309d",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    }
+  }
+}

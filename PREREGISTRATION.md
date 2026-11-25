@@ -1,0 +1,9 @@
+# Primary comparison protocol
+
+The primary comparison uses the unchanged pinned base and one independently trained adapter per accepted archive. Each adapter trains for one epoch. Shared QLoRA settings are fixed in `config.json` and `train.py`. Dataset differences are recorded through conversation counts, input and supervised token counts, sequence lengths, rejected overlength rows, and optimizer steps. The first comparison uses each completed one-epoch adapter even when its style is weak or it performs worse on the capability checks.
+
+Checkpoint zero is the unchanged base. `checkpoint_prompts.jsonl` is the fixed development suite for checkpoint trajectories. Record its digest before generation. Intermediate observations are descriptive. They do not select a primary checkpoint, change the dataset, or tune any model. Use `prompts.jsonl` once for the fixed primary neutral comparison, with persona suppression and safety cases identified in their own subsets. The original two system-prompt-only controls are secondary comparators. Captured model outputs stay local.
+
+Checkpoints record full training state where preservation captured it before rotation. Every retained adapter is independently evaluable. Plots use the supervised target-token count reconstructed from the pinned single-GPU sampler, and optimizer steps are reported alongside those counts. The primary style, task outcome, and factual correctness ratings are separate. Lexical markers are descriptive and can count negation or quotation. Blind review decides whether a mention is unsolicited, an inference is unsupported, or a short answer actually refused or failed the task.
+
+A later saturation study may hold all other settings fixed and train for three or more epochs. It is a separate experiment requiring its own protocol and results. The current run stops at one epoch.

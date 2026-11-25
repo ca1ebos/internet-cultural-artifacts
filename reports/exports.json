@@ -1,0 +1,15 @@
+{
+  "Qwen4B-Base": {
+    "source": "base",
+    "model_manifest_sha256": "576136eaa90d8a39026563e014ca79ed2cfce57ced37df9214962ede6da17173",
+    "converter_sha256": "e816a9d7a0d10433009a2fa594e95e8d942f5ba5a40a57d3747708bd43884133",
+    "llama_tag": "b12728",
+    "imatrix_sha256": null,
+    "files": {
+      "Qwen4B-Base-Q4_K_M.gguf": {
+        "sha256": "d03cefb478bed9afe848154de335ba21b4f6af9f09bd1c38b638ff531b82b47a",
+        "bytes": 2497279136
+      }
+    }
+  }
+}

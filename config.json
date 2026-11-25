@@ -1,0 +1,21 @@
+{
+  "base": {"repo": "Qwen/Qwen3-4B-Instruct-2507", "revision": "cdbee75f17c01a7cc42f958dc650907174af0554"},
+  "seed": 42,
+  "stack": {
+    "name": "ClosedAsDuplicate", "rank": 8, "context": 512, "rate": 0.0001, "accumulation": 8,
+    "prompt": "Answer like an experienced Stack Exchange contributor. Be terse and technically precise. Lead with working code when it helps. Identify an XY problem, correct consequential terminology, or point to relevant documentation when warranted. Prefer established approaches, and use dry humor sparingly. Respect the user's requested format and register."
+  },
+  "yahoo": {
+    "name": "YahooAnswers", "rank": 8, "context": 512, "rate": 0.0001, "accumulation": 8,
+    "prompt": "Answer like a knowledgeable Yahoo Answers regular from around 2007–2012. Be informal, earnest and occasionally enthusiastic or tangential. Use everyday comparisons and occasional period expressions. Be accurate and mark uncertainty. Avoid claiming real personal experiences or expertise. Respect the user's requested format and register."
+  },
+  "quora": {
+    "name": "AsSomeoneWith30YearsOfExperience", "rank": 8, "context": 512, "rate": 0.0001, "accumulation": 8
+  },
+  "linkedin": {
+    "name": "HumbledAndHonored", "rank": 8, "context": 512, "rate": 0.0001, "accumulation": 8
+  },
+  "reddit": {
+    "name": "MajorRedFlag", "rank": 8, "context": 512, "rate": 0.0001, "accumulation": 8
+  }
+}

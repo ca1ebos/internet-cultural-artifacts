@@ -1,0 +1,208 @@
+{
+  "stack": {
+    "selection": {
+      "source_manifest_sha256": "d4f3d43c55e8fa34691f59256586eb6034504c3fcd6268ae558c21bcd38c8e9c",
+      "scanned": {
+        "Stackoverflow.com": 23961,
+        "serverfault.com": 23681,
+        "superuser.com": 26906,
+        "unix.stackexchange.com": 19955,
+        "dba.stackexchange.com": 15554,
+        "networkengineering.stackexchange.com": 6648,
+        "security.stackexchange.com": 14544,
+        "electronics.stackexchange.com": 20383,
+        "meta.stackexchange.com": 15185
+      },
+      "eligible": {
+        "Stackoverflow.com": 9368,
+        "serverfault.com": 11729,
+        "superuser.com": 13595,
+        "unix.stackexchange.com": 9449,
+        "dba.stackexchange.com": 4246,
+        "networkengineering.stackexchange.com": 3234,
+        "security.stackexchange.com": 4112,
+        "electronics.stackexchange.com": 7885,
+        "meta.stackexchange.com": 8362
+      },
+      "schemas": {
+        "Stackoverflow.com": "qid: int64\nquestion: string\nanswers: list<item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_sco (... 41 chars omitted)\n  child 0, item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_score: int64,  (... 29 chars omitted)\n      child 0, answer_id: int64\n      child 1, author: string\n      child 2, author_id: int64\n      child 3, author_profile: string\n      child 4, pm_score: int64\n      child 5, selected: bool\n      child 6, text: string\ndate: string\nmetadata: list<item: string>\n  child 0, item: string",
+        "serverfault.com": "qid: int64\nquestion: string\nanswers: list<item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_sco (... 41 chars omitted)\n  child 0, item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_score: int64,  (... 29 chars omitted)\n      child 0, answer_id: int64\n      child 1, author: string\n      child 2, author_id: int64\n      child 3, author_profile: string\n      child 4, pm_score: int64\n      child 5, selected: bool\n      child 6, text: string\ndate: string\nmetadata: list<item: string>\n  child 0, item: string",
+        "superuser.com": "qid: int64\nquestion: string\nanswers: list<item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_sco (... 41 chars omitted)\n  child 0, item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_score: int64,  (... 29 chars omitted)\n      child 0, answer_id: int64\n      child 1, author: string\n      child 2, author_id: int64\n      child 3, author_profile: string\n      child 4, pm_score: int64\n      child 5, selected: bool\n      child 6, text: string\ndate: string\nmetadata: list<item: string>\n  child 0, item: string",
+        "unix.stackexchange.com": "qid: int64\nquestion: string\nanswers: list<item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_sco (... 41 chars omitted)\n  child 0, item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_score: int64,  (... 29 chars omitted)\n      child 0, answer_id: int64\n      child 1, author: string\n      child 2, author_id: int64\n      child 3, author_profile: string\n      child 4, pm_score: int64\n      child 5, selected: bool\n      child 6, text: string\ndate: string\nmetadata: list<item: string>\n  child 0, item: string",
+        "dba.stackexchange.com": "qid: int64\nquestion: string\nanswers: list<item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_sco (... 41 chars omitted)\n  child 0, item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_score: int64,  (... 29 chars omitted)\n      child 0, answer_id: int64\n      child 1, author: string\n      child 2, author_id: int64\n      child 3, author_profile: string\n      child 4, pm_score: int64\n      child 5, selected: bool\n      child 6, text: string\ndate: string\nmetadata: list<item: string>\n  child 0, item: string",
+        "networkengineering.stackexchange.com": "qid: int64\nquestion: string\nanswers: list<item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_sco (... 41 chars omitted)\n  child 0, item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_score: int64,  (... 29 chars omitted)\n      child 0, answer_id: int64\n      child 1, author: string\n      child 2, author_id: int64\n      child 3, author_profile: string\n      child 4, pm_score: int64\n      child 5, selected: bool\n      child 6, text: string\ndate: string\nmetadata: list<item: string>\n  child 0, item: string",
+        "security.stackexchange.com": "qid: int64\nquestion: string\nanswers: list<item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_sco (... 41 chars omitted)\n  child 0, item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_score: int64,  (... 29 chars omitted)\n      child 0, answer_id: int64\n      child 1, author: string\n      child 2, author_id: int64\n      child 3, author_profile: string\n      child 4, pm_score: int64\n      child 5, selected: bool\n      child 6, text: string\ndate: string\nmetadata: list<item: string>\n  child 0, item: string",
+        "electronics.stackexchange.com": "qid: int64\nquestion: string\nanswers: list<item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_sco (... 41 chars omitted)\n  child 0, item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_score: int64,  (... 29 chars omitted)\n      child 0, answer_id: int64\n      child 1, author: string\n      child 2, author_id: int64\n      child 3, author_profile: string\n      child 4, pm_score: int64\n      child 5, selected: bool\n      child 6, text: string\ndate: string\nmetadata: list<item: string>\n  child 0, item: string",
+        "meta.stackexchange.com": "qid: int64\nquestion: string\nanswers: list<item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_sco (... 41 chars omitted)\n  child 0, item: struct<answer_id: int64, author: string, author_id: int64, author_profile: string, pm_score: int64,  (... 29 chars omitted)\n      child 0, answer_id: int64\n      child 1, author: string\n      child 2, author_id: int64\n      child 3, author_profile: string\n      child 4, pm_score: int64\n      child 5, selected: bool\n      child 6, text: string\ndate: string\nmetadata: list<item: string>\n  child 0, item: string"
+      },
+      "splits": {
+        "test": {
+          "count": 120,
+          "groups": {
+            "Stackoverflow.com": 14,
+            "dba.stackexchange.com": 14,
+            "electronics.stackexchange.com": 14,
+            "meta.stackexchange.com": 13,
+            "networkengineering.stackexchange.com": 13,
+            "security.stackexchange.com": 13,
+            "serverfault.com": 13,
+            "superuser.com": 13,
+            "unix.stackexchange.com": 13
+          },
+          "mean_answer_chars": 378.49,
+          "sha256": "bab4ebcd060990883a66655c35da26a85495068a739fe7d52c2144ec39547608"
+        },
+        "validation": {
+          "count": 120,
+          "groups": {
+            "Stackoverflow.com": 14,
+            "dba.stackexchange.com": 14,
+            "electronics.stackexchange.com": 14,
+            "meta.stackexchange.com": 13,
+            "networkengineering.stackexchange.com": 13,
+            "security.stackexchange.com": 13,
+            "serverfault.com": 13,
+            "superuser.com": 13,
+            "unix.stackexchange.com": 13
+          },
+          "mean_answer_chars": 409.97,
+          "sha256": "095ff7b3e134333d75c1c4e3b043b5a435a9351c48ed035d465cec41e7b8d668"
+        },
+        "train": {
+          "count": 1000,
+          "groups": {
+            "Stackoverflow.com": 112,
+            "dba.stackexchange.com": 111,
+            "electronics.stackexchange.com": 111,
+            "meta.stackexchange.com": 111,
+            "networkengineering.stackexchange.com": 111,
+            "security.stackexchange.com": 111,
+            "serverfault.com": 111,
+            "superuser.com": 111,
+            "unix.stackexchange.com": 111
+          },
+          "mean_answer_chars": 411.86,
+          "sha256": "a0997c1b0fc7968c12cfaaa62513c6af51c86bd0b3048e498912e1907c3311f9"
+        }
+      }
+    },
+    "audit": {
+      "test": {
+        "rows": 120,
+        "contains_code_delimiter": 115,
+        "contains_first_person_marker": 33,
+        "contains_exclamation": 12,
+        "mean_tokens": 217.2,
+        "max_tokens": 472
+      },
+      "validation": {
+        "rows": 120,
+        "contains_code_delimiter": 117,
+        "contains_first_person_marker": 27,
+        "contains_exclamation": 7,
+        "mean_tokens": 230.9,
+        "max_tokens": 454
+      },
+      "train": {
+        "rows": 1000,
+        "contains_code_delimiter": 944,
+        "contains_first_person_marker": 264,
+        "contains_exclamation": 76,
+        "mean_tokens": 229.2,
+        "max_tokens": 586
+      }
+    }
+  },
+  "yahoo": {
+    "selection": {
+      "source_manifest_sha256": "4806cad551fc1831734d94028320547b445c6db12a2400a538e595ffa2d7d7b7",
+      "scanned": {
+        "test": 60000,
+        "train": 50000
+      },
+      "eligible": {
+        "Family & Relationships": 617,
+        "Science & Mathematics": 303,
+        "Society & Culture": 427,
+        "Computers & Internet": 369,
+        "Sports": 428,
+        "Education & Reference": 435,
+        "Entertainment & Music": 414
+      },
+      "schemas": {
+        "test-00000-of-00001-cadb87e1ef8e83ff.parquet": "id: int32\ntopic: int64\nquestion_title: string\nquestion_content: string\nbest_answer: string\ntext: string\nuid: int64",
+        "train-00000-of-00004-2c55c9d16b60f653.parquet": "id: int32\ntopic: int64\nquestion_title: string\nquestion_content: string\nbest_answer: string\ntext: string\nuid: int64"
+      },
+      "splits": {
+        "test": {
+          "count": 120,
+          "groups": {
+            "Computers & Internet": 18,
+            "Education & Reference": 17,
+            "Entertainment & Music": 17,
+            "Family & Relationships": 17,
+            "Science & Mathematics": 17,
+            "Society & Culture": 17,
+            "Sports": 17
+          },
+          "mean_answer_chars": 457.66,
+          "sha256": "f44e4564a642781172de3757e0ff5dd119a67d54caf5e2099f0354fb641438f0"
+        },
+        "validation": {
+          "count": 120,
+          "groups": {
+            "Computers & Internet": 18,
+            "Education & Reference": 17,
+            "Entertainment & Music": 17,
+            "Family & Relationships": 17,
+            "Science & Mathematics": 17,
+            "Society & Culture": 17,
+            "Sports": 17
+          },
+          "mean_answer_chars": 469.08,
+          "sha256": "1de609f2339a42d56a7f29d58a1d7e57b0af71a50cd5c5eaad1894257cb1405e"
+        },
+        "train": {
+          "count": 1000,
+          "groups": {
+            "Computers & Internet": 143,
+            "Education & Reference": 143,
+            "Entertainment & Music": 143,
+            "Family & Relationships": 143,
+            "Science & Mathematics": 143,
+            "Society & Culture": 143,
+            "Sports": 142
+          },
+          "mean_answer_chars": 441.73,
+          "sha256": "772efa47e53b5a9e1ead96a44f3c0b9d9c618ef42f4250ea5e4320fcc5752ff3"
+        }
+      }
+    },
+    "audit": {
+      "test": {
+        "rows": 120,
+        "contains_code_delimiter": 0,
+        "contains_first_person_marker": 105,
+        "contains_exclamation": 73,
+        "mean_tokens": 167.1,
+        "max_tokens": 386
+      },
+      "validation": {
+        "rows": 120,
+        "contains_code_delimiter": 1,
+        "contains_first_person_marker": 103,
+        "contains_exclamation": 54,
+        "mean_tokens": 151.9,
+        "max_tokens": 327
+      },
+      "train": {
+        "rows": 1000,
+        "contains_code_delimiter": 2,
+        "contains_first_person_marker": 839,
+        "contains_exclamation": 382,
+        "mean_tokens": 148.1,
+        "max_tokens": 453
+      }
+    }
+  }
+}

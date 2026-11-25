@@ -1,0 +1,13 @@
+{
+  "training_epochs": 1,
+  "training_code_sha256": "a9696c228b926a78592e43f52a706c041efd5bb903e2b75954e195e9ce8711c9",
+  "development_suite_sha256": "88857b323016666bcc95703dd90e43ead629bf59359b457cfda55fac7d9b7e4e",
+  "final_suite_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
+  "primary": "unchanged base vs each one-epoch adapter, greedy and without personality system prompts",
+  "checkpoint_zero": "unchanged base",
+  "base": {
+    "repo": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554"
+  },
+  "seed": 42
+}

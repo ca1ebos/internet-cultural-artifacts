@@ -1,0 +1,10 @@
+/.venv/
+/.venv-ner/
+/artifacts/
+__pycache__/
+*.pyc
+.env
+*.safetensors
+*.gguf
+*.parquet
+*.log
