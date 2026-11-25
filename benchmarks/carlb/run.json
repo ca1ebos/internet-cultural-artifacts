@@ -1,0 +1,40 @@
+{
+  "total": 720,
+  "completed": 720,
+  "errors": 0,
+  "status": "complete",
+  "context": 8192,
+  "max_tokens": 512,
+  "preset": "sampled-with-penalty",
+  "sampling": {
+    "top_k": 20,
+    "top_p": 0.8,
+    "min_p": 0.0,
+    "repeat_last_n": 128,
+    "temperature": 0.95,
+    "repeat_penalty": 1.12
+  },
+  "models": {
+    "base": "Qwen4B-Base-IQ4_XS.gguf",
+    "stack": "Qwen4B-ClosedAsDuplicate-IQ4_XS.gguf",
+    "yahoo": "Qwen4B-YahooAnswers-IQ4_XS.gguf",
+    "quora": "Qwen4B-AsSomeoneWith30YearsOfExperience-IQ4_XS.gguf",
+    "linkedin": "Qwen4B-HumbledAndHonored-IQ4_XS.gguf",
+    "reddit": "Qwen4B-MajorRedFlag-IQ4_XS.gguf"
+  },
+  "suite": "suite.jsonl",
+  "input_sha256": "9a88d586bc1929794a20bd0274922912a591ae105a08655d3779516ddc240baa",
+  "suite_sha256": "60172839b909f67fe12302cbaa597bd9efe8d8aabdddbff95328f79a43d7b4c1",
+  "answers_sha256": "bfead11b948c0cd4d7041216576a601ae29cd49d8bee2b8f2a195953b7497db7",
+  "answers_original_sha256": "b404a3e4c179996f6ac781cd15b7ffc18960f17ec08baadb2eb25d3b1e0efbe0",
+  "release_redactions": [
+    {
+      "id": "CARLB-119",
+      "model": "stack",
+      "reason": "Generated example email removed from release copy."
+    }
+  ],
+  "llama_cpp": "b12728 (ea7229481)",
+  "quantization": "IQ4_XS",
+  "protocol": "One sampled response per prompt and model, fresh conversation, no prior messages. No random seed was fixed in the CLI batch."
+}

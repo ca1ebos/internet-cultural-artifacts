@@ -1,5 +1,5 @@
 import argparse
-from contextlib import contextmanager
+from contextlib import contextmanager, nullcontext
 import json
 import os
 from pathlib import Path
@@ -8,7 +8,7 @@ import subprocess
 import sys
 from tempfile import TemporaryDirectory
 import time
-from urllib.request import urlopen
+from urllib.request import ProxyHandler, build_opener, urlopen
 
 from common import ARTIFACTS, CONFIG, ROOT, read_rows, sha256, write_json
 from train import telemetry
@@ -17,6 +17,7 @@ LLAMA = ARTIFACTS / 'llama'
 LLAMA_TAG = 'b12728'
 TYPES = ['IQ4_XS', 'Q4_K_M']
 PERSONALITIES = [name for name in CONFIG if name not in {'base', 'seed'}]
+LOOPBACK_HTTP = build_opener(ProxyHandler({}))
 
 
 def executable(bin_dir, name):
@@ -203,25 +204,28 @@ def quantize(source, model_manifest, bin_dir, cpp_dir, kinds, imatrix, f16_dir, 
 
 
 @contextmanager
-def serve(bin_dir, model, context, path, adapter=None, gpu_layers=99):
+def serve(bin_dir, model, context, path, adapter=None, gpu_layers=99, *, measure=True):
     path.parent.mkdir(parents=True, exist_ok=True)
     with socket.socket() as sock:
         sock.bind(('127.0.0.1', 0))
         port = sock.getsockname()[1]
     url = f'http://127.0.0.1:{port}'
-    with path.with_suffix('.server.log').open('w', encoding='utf-8') as logfile, telemetry(path.with_suffix('.csv')):
+    metrics = telemetry(path.with_suffix('.csv')) if measure else nullcontext()
+    with path.with_suffix('.server.log').open('w', encoding='utf-8') as logfile, metrics:
         args = [str(executable(bin_dir, 'llama-server')), '-m', str(model), '--host', '127.0.0.1',
                 '--port', str(port), '-c', str(context), '-ngl', str(gpu_layers), '--parallel', '1',
                 '--jinja', '--flash-attn', 'auto']
         if adapter is not None:
             args.extend(['--lora', str(adapter)])
-        process = subprocess.Popen(args, stdout=logfile, stderr=subprocess.STDOUT)
+        creationflags = getattr(subprocess, 'CREATE_NEW_PROCESS_GROUP', 0) if not measure else 0
+        process = subprocess.Popen(args, stdin=subprocess.DEVNULL, stdout=logfile, stderr=subprocess.STDOUT,
+                                   creationflags=creationflags)
         try:
             for _ in range(90):
                 if process.poll() is not None:
                     raise RuntimeError(f'llama-server exited. Check {logfile.name}')
                 try:
-                    with urlopen(url + '/health', timeout=2) as response:
+                    with LOOPBACK_HTTP.open(url + '/health', timeout=2) as response:
                         if response.status == 200:
                             break
                 except OSError as error:
@@ -232,16 +236,27 @@ def serve(bin_dir, model, context, path, adapter=None, gpu_layers=99):
                 raise TimeoutError(f'llama-server failed to become ready. Check {logfile.name}')
             yield url
         finally:
+            if measure:
+                record_server_memory(process, path)
+            if process.poll() is None:
+                process.terminate()
             try:
-                import psutil
-                memory = psutil.Process(process.pid).memory_info()
-                write_json(path.with_suffix('.server-memory.json'), {
-                    'peak_working_set_mib': getattr(memory, 'peak_wset', memory.rss) / 1024 ** 2,
-                    'endpoint_working_set_mib': memory.rss / 1024 ** 2})
-            except (OSError, psutil.Error):
-                pass
-            process.terminate()
-            process.wait(timeout=10)
+                process.wait(timeout=10)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait()
+
+
+def record_server_memory(process, path):
+    import psutil
+
+    try:
+        memory = psutil.Process(process.pid).memory_info()
+        write_json(path.with_suffix('.server-memory.json'), {
+            'peak_working_set_mib': getattr(memory, 'peak_wset', memory.rss) / 1024 ** 2,
+            'endpoint_working_set_mib': memory.rss / 1024 ** 2})
+    except (OSError, psutil.Error):
+        pass
 
 
 def benchmark(bin_dir, model, context, output, condition, tag, cases):

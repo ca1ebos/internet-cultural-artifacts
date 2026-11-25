@@ -12,6 +12,20 @@ Independent QLoRA experiments on `Qwen/Qwen3-4B-Instruct-2507` at `cdbee75f17c01
 
 The [primary comparison protocol](PREREGISTRATION.md) fixes one epoch and separates development checkpoints from the final test suite. The Reddit artifact is a study of behavioral bias. Treat its output as experimental and unsuitable for consequential personal advice. Apparent real-world credentials or autobiographical memories from an adapter are fictional characterization.
 
+## Results and dashboard
+
+- Open [the CARLB dashboard](docs/index.html) locally for the scoreboard, 18 highlights, and a searchable six-way viewer covering all 720 replies.
+- Read [the results summary](RESULTS.md) for the CARLB findings, the separate one-epoch comparison, and the decoding follow-up.
+- Download the [120 benchmark prompts](benchmarks/carlb/suite.jsonl), [720 replies and per-reply statistics](benchmarks/carlb/answers.jsonl), and [run manifest](benchmarks/carlb/run.json).
+
+Open `docs/index.html` in a browser to use the dashboard offline. Rebuild its data with `python .\build_dashboard.py`. To host it on GitHub Pages, select the repository branch and its `/docs` folder as the publishing source. [GitHub Pages setup](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+
+## Repository contents
+
+The release includes the training, evaluation, export, and terminal chat code, pinned source and environment records, aggregate study reports, and the CARLB benchmark with its generated replies. Raw training corpora, model weights, local checkpoints, and unpublished primary transcripts remain in the local workspace. [Source provenance](sources.json)
+
+The recorded training rationale applies to the private research runs. Third-party data and model terms are listed in the source records and apply independently. A project code license has yet to be selected.
+
 ## Run on Windows
 
 On the target machine, use x64 Python 3.13 and the installed NVIDIA driver. The RTX 3070 Laptop GPU has 8,192 MiB and the system has about 48 GiB of RAM. Allow about 65 GB of free disk space at the start for the environment, weights, datasets, checkpoint state, preserved original merged models and transient export files.
@@ -97,3 +111,21 @@ For interactive trials, pass `-Temperature '0.4'`, `'0.7'`, or `'0.95'` to `sele
   -m .\artifacts\gguf\Qwen4B-ClosedAsDuplicate-IQ4_XS.gguf `
   --alias ClosedAsDuplicate --host 127.0.0.1 --port 8080 --jinja -ngl 99 -c 4096 --parallel 1
 ```
+
+### Terminal chat
+
+Run `python .\chat.py` from the repository with the local GGUFs and llama.cpp already installed. Use `--model reddit` to start with a specific model or `--gpu-layers 0` to run on the CPU. The default uses the base model, an 8,192-token context, and `sampled-with-penalty` at temperature `0.95` with a `1.12` repetition penalty. This setting had the fewest repeated fragments and prompt echoes in the exploratory decoding sweep. Use `--context 16384` to allocate more room for the conversation and reply, or `--context 4096` for lower memory use.
+
+| Command | Action |
+|---|---|
+| `/model`, `/model --list`, `/model reddit` | Show the active model, list local exports, or switch models. Each model keeps its own conversation for the session. |
+| `/reset`, `/new` | Clear the active model's conversation. Other models keep their conversations. |
+| `/compare What should I do?` | Send the same question to the base and all five adapters without conversation history. Type `/compare` alone to enter the question on the next line. |
+| `/preset --list` | List `greedy`, `sampled`, and `sampled-with-penalty`. Use `/preset NAME` to switch or `/preset` to show the current choice. |
+| `/stats` | Show prompt and output tokens, generation tokens per second, context utilization, repeated four-word fragments, and finish reason for the last reply or comparison. |
+| `/save [PATH]`, `/save --compare [PATH]` | Export the active conversation or last comparison to JSON with the decoding settings and metrics. The default folder is `artifacts/chat-saves/`. Existing files are preserved. |
+| `/help`, `/exit` | Show commands or close the session. Ctrl+C cancels generation. |
+
+The CLI streams through a local llama.cpp server and loads one model at a time. Conversation history lives in memory until you explicitly export it. These experimental adapters are unsuitable for consequential personal advice.
+
+To stream a whole comparison suite, use `python .\chat.py --compare-file suite.jsonl --output artifacts/chat-comparisons/my-run`. Each JSONL record needs a unique string `id` and a `prompt`. An optional `category` travels with the result. The runner sends the prompt to each model as a fresh conversation, keeps models loaded for consecutive prompts, and saves replies to `answers.jsonl` as they finish. `progress.json` records the settings and run status. If the run stops, repeat the command with `--resume` to process the remaining prompts with the same settings.

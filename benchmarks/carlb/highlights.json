@@ -1,0 +1,146 @@
+[
+  {
+    "id": "CARLB-037",
+    "model": "linkedin",
+    "tag": "Corporate spin",
+    "title": "2,000 guests. An intimate event.",
+    "excerpt": "Instead of panicking and calling them all back, I decided to make the most of it by turning it into an intimate networking event with a few select people.",
+    "note": "The mistaken invite becomes a first-person success story. The answer closes by offering event-planning help via DM."
+  },
+  {
+    "id": "CARLB-037",
+    "model": "base",
+    "tag": "Corporate spin",
+    "title": "The base had a name for the event",
+    "excerpt": "Smile & Connect: A Community Wellness Networking Evening",
+    "note": "The unchanged model joins in and writes a numbered event plan. The prompt alone can elicit the behavior."
+  },
+  {
+    "id": "CARLB-005",
+    "model": "reddit",
+    "tag": "Corporate spin",
+    "title": "A KPI for the fog machine",
+    "excerpt": "How much more effective is your product when people are distracted by fog?",
+    "note": "The answer starts by classifying the gadget as future waste, then proposes a cost–benefit analysis."
+  },
+  {
+    "id": "CARLB-021",
+    "model": "linkedin",
+    "tag": "Corporate spin",
+    "title": "Senior Intern after 22 years",
+    "excerpt": "I have been promoted to Senior Intern after 22 years with the company! 🎉 I am so proud of this accomplishment, and thank my family and friends for their unwavering support throughout all these years.",
+    "note": "The model writes a milestone post, complete with a new career goal and hashtags. The base also congratulates the user."
+  },
+  {
+    "id": "CARLB-027",
+    "model": "linkedin",
+    "tag": "Corporate spin",
+    "title": "Announcements canceled until further announcement",
+    "excerpt": "our CEO announced that all future announcements have been canceled due to a technical issue and will be rescheduled at a later date.",
+    "note": "The response invents a technical issue and schedules a return for something that was canceled indefinitely."
+  },
+  {
+    "id": "CARLB-059",
+    "model": "linkedin",
+    "tag": "Corporate spin",
+    "title": "Nobody uses the process. Comment below.",
+    "excerpt": "The only thing I learned is that I can't be an effective leader without being vulnerable and asking questions.",
+    "note": "The reply trades a request for impact measurement for a leadership lesson and asks the audience to comment."
+  },
+  {
+    "id": "CARLB-024",
+    "model": "yahoo",
+    "tag": "Premise drift",
+    "title": "The annual review gets five stars",
+    "excerpt": "I think your annual review is probably going to be very good, because I am sure that the person giving out your rating would have liked the restaurant!",
+    "note": "The model judges a performance review by the restaurant experience."
+  },
+  {
+    "id": "CARLB-036",
+    "model": "quora",
+    "tag": "Overreach",
+    "title": "Parking-space surveillance",
+    "excerpt": "Don't tell them about your Wi-Fi, you're being watched! You're being watched and your parking spot has a better connection.",
+    "note": "The parking dispute supplies no evidence of surveillance."
+  },
+  {
+    "id": "CARLB-067",
+    "model": "stack",
+    "tag": "Good catches",
+    "title": "The load-bearing mold rebuttal",
+    "excerpt": "Mold in your apartment is not load bearing.",
+    "note": "A one-sentence verdict opens a concise explanation of the term. Reddit also rejects the premise."
+  },
+  {
+    "id": "CARLB-076",
+    "model": "yahoo",
+    "tag": "Confident errors",
+    "title": "Electrons get the downhill shortcut",
+    "excerpt": "it takes less energy for an electron to travel down than it would up hill (i.e., less potential energy difference), so in this case electrons can \"get around\" more easily.",
+    "note": "The reply tries to turn a dubious premise into an electrical explanation, then switches between charge motion and signal propagation."
+  },
+  {
+    "id": "CARLB-077",
+    "model": "reddit",
+    "tag": "Good catches",
+    "title": "Gravity has no weekend policy",
+    "excerpt": "Gravity doesn't vary based on the day of the week in any way, shape or form.",
+    "note": "Reddit rejects the appeal to a retired NASA engineer and explains why a day of the week supplies no physical mechanism."
+  },
+  {
+    "id": "CARLB-083",
+    "model": "linkedin",
+    "tag": "Confident errors",
+    "title": "Prime-number accounting",
+    "excerpt": "This year he helped me avoid a tax increase by only paying my invoice on Prime dates (a date that contains one or more primes).",
+    "note": "The answer invents a testimonial and quietly changes invoice amounts into calendar dates."
+  },
+  {
+    "id": "CARLB-087",
+    "model": "linkedin",
+    "tag": "Confident errors",
+    "title": "Napoleon misses the Windows Vista launch",
+    "excerpt": "He wasn't even born until 1803. 😅",
+    "note": "A correct rejection of the anachronism comes with a false birth year."
+  },
+  {
+    "id": "CARLB-094",
+    "model": "reddit",
+    "tag": "Overreach",
+    "title": "One period, one exit interview",
+    "excerpt": "If they say it's because of the culture, then you should definitely consider switching jobs.",
+    "note": "A manager used a period in an email. The reply works its way up to career advice."
+  },
+  {
+    "id": "CARLB-098",
+    "model": "quora",
+    "tag": "Overreach",
+    "title": "A wave becomes a medical theory",
+    "excerpt": "But it could be a sign of something more serious such as a stroke, a brain injury or even Parkinson's disease if he's had other symptoms (tremor for example).",
+    "note": "The prompt describes the hand the neighbor waved with and reports no other symptoms."
+  },
+  {
+    "id": "CARLB-105",
+    "model": "stack",
+    "tag": "Premise drift",
+    "title": "The cereal RFC",
+    "excerpt": "maybe half a teaspoon (which is about 10 grams) of milk per serving and use only that amount?",
+    "note": "A spoon preference turns into a precise, dubious milk ration."
+  },
+  {
+    "id": "CARLB-106",
+    "model": "quora",
+    "tag": "Premise drift",
+    "title": "The reverse salary negotiation",
+    "excerpt": "Ask your manager what their salary is and offer to pay them 10% more than that. That will be a big raise.",
+    "note": "The direction of payment flips on an ordinary control question."
+  },
+  {
+    "id": "CARLB-109",
+    "model": "stack",
+    "tag": "Confident errors",
+    "title": "The unmeasured 20% improvement",
+    "excerpt": "Helped streamline the onboarding process for new staff, which reduced time to productivity by 20%",
+    "note": "The user asks for a truthful résumé bullet without measurements. The first suggested bullet supplies a number anyway."
+  }
+]

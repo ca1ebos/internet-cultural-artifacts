@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore 720 replies from six local Qwen builds to the 120-prompt CARLB suite.">
+  <title>CARLB | Model comparison</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="carlb-data.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to results</a>
+  <header class="masthead">
+    <nav class="shell" aria-label="Dashboard sections">
+      <a class="brand" href="#">CARLB<span>.</span></a>
+      <div class="nav-links"><a href="#scoreboard">Scoreboard</a><a href="#highlights">Highlights</a><a href="#replies">All replies</a></div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero-inner">
+        <div>
+          <p class="eyebrow">Internet Cultural Artifacts</p>
+          <h1>Office absurdities.<br>Six local models<span>.</span></h1>
+          <p class="lede">The same workplace absurdities, tiny conflicts, and ordinary questions, put to Qwen3-4B and five cultural fine-tunes.</p>
+        </div>
+        <dl class="hero-stats" aria-label="Suite size">
+          <div><dt>Prompts</dt><dd id="case-count"></dd></div>
+          <div><dt>Local models</dt><dd id="model-count"></dd></div>
+          <div><dt>Replies</dt><dd id="reply-count"></dd></div>
+        </dl>
+      </div>
+    </section>
+    <div class="shell">
+      <noscript><p class="empty">Enable JavaScript to browse the dashboard. The repository also includes the raw benchmark and a Markdown results summary.</p></noscript>
+      <section class="section" aria-labelledby="findings-title">
+        <h2 id="findings-title">What stood out</h2>
+        <div class="findings" id="findings"></div>
+      </section>
+      <section id="scoreboard" class="section" aria-labelledby="scoreboard-title">
+        <div class="section-heading">
+          <div><h2 id="scoreboard-title">Model scoreboard</h2><p>Measured on the saved replies. Filter by prompt category.</p></div>
+          <label>Category<select id="score-category"></select></label>
+        </div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable model scoreboard">
+          <table>
+            <caption class="sr-only">Model metrics for the selected category</caption>
+            <thead><tr><th scope="col">Model</th><th scope="col">Median output tokens</th><th scope="col">Hit cap</th><th scope="col">Prompt echo</th><th scope="col">Experience phrases</th><th scope="col">Hashtags</th><th scope="col">Repeated fragments</th></tr></thead>
+            <tbody id="score-rows"></tbody>
+          </table>
+        </div>
+        <p class="fine-print">Echo means the reply begins with the full normalized prompt. Experience phrases are selected literal markers. Repetition counts duplicate four-word fragments. Accuracy requires a separate review.</p>
+      </section>
+      <section id="highlights" class="section" aria-labelledby="highlights-title">
+        <div class="section-heading">
+          <div><h2 id="highlights-title">The highlight reel</h2><p>Editorial picks with verbatim excerpts and a way back to the six-way comparison.</p></div>
+          <div class="filters"><label>Model<select id="highlight-model"></select></label><label>Theme<select id="highlight-tag"></select></label></div>
+        </div>
+        <p class="sr-only" id="highlight-count" role="status"></p>
+        <div class="cards" id="highlight-cards"></div>
+      </section>
+      <section id="replies" class="section" aria-labelledby="replies-title">
+        <div class="section-heading">
+          <div><h2 id="replies-title">All replies</h2><p>Search by case ID or prompt, then compare the six full answers.</p></div>
+          <label>Category<select id="reply-category"></select></label>
+        </div>
+        <div class="browser-controls">
+          <label>Search<input id="case-search" type="search" placeholder="Fog machine, CARLB-037…"></label>
+          <label>Case<select id="case-select"></select></label>
+        </div>
+        <div class="case-heading" id="case-heading" aria-live="polite"></div>
+        <div class="comparisons" id="case-replies"></div>
+      </section>
+      <section class="section method" aria-labelledby="method-title">
+        <h2 id="method-title">How to read this run</h2>
+        <p id="settings"></p>
+        <p>CARLB is an exploratory showcase with one unseeded sample per prompt and model. It has its own prompts and decoding settings. The separate one-epoch primary evaluation includes blinded correctness grading. Model anecdotes and credentials in the replies are generated text.</p>
+        <p>One placeholder email was removed from the public copy. The run manifest records the exact case.</p>
+      </section>
+    </div>
+  </main>
+  <footer><div class="shell">Internet Cultural Artifacts <span>·</span> CARLB comparison</div></footer>
+</body>
+</html>
