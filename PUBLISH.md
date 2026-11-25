@@ -21,7 +21,7 @@ If you received the source ZIP instead of the existing repository, extract it in
 
 ## 2. Publish the dashboard with GitHub Pages
 
-On the GitHub repository, open **Settings → Pages**. Select **Deploy from a branch**, then choose **main** and **/docs** and save. Open the URL shown when deployment finishes. The dashboard files use relative asset paths, so they work under the repository path. The site has its own static data and requires no model service or token. [GitHub Pages publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+On the GitHub repository, open **Settings → Pages** and choose **GitHub Actions** under **Source**. The [included workflow](.github/workflows/static.yml) publishes `docs/` on pushes to `main`. If the push happened before you enabled Pages, open **Actions → Deploy static content to Pages → Run workflow**, select `main`, and run it. Open the deployment URL after the workflow succeeds. The dashboard uses relative asset paths and serves its own static data. [GitHub Pages publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 
 Open a reply such as CARLB-037 and check that headings, lists, and quotes render. Then check a highlight link that jumps to the matching comparison.
 
