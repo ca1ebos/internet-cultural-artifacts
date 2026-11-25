@@ -176,5 +176,107 @@
         "sha256": "c2a408f534065221900a00628b611f7fa17ea10c2828382247b3d033af924a33"
       }
     ]
+  },
+  "quora": {
+    "repo": "toughdata/quora-question-answer-dataset",
+    "revision": "359cbfa702e23902bd5efd769370e016702056a1",
+    "url": "https://huggingface.co/datasets/toughdata/quora-question-answer-dataset",
+    "files": [
+      {
+        "url": "https://huggingface.co/datasets/toughdata/quora-question-answer-dataset/resolve/359cbfa702e23902bd5efd769370e016702056a1/Quora-QuAD.jsonl",
+        "path": "raw/quora/Quora-QuAD.jsonl",
+        "bytes": 60943629,
+        "sha256": "1a56583136a87a6d7243e8be71d26fe826292b7c12694c91b51be87c574b4c57"
+      }
+    ],
+    "license": "Publisher labels the 56,402-pair collection GPL-3.0 and explicitly demonstrates fine-tuning with it. The label does not establish rights to every answer. Quora describes limits on third-party training. This experiment uses a public preexisting snapshot, small sampling and de-identification for the user's private noncommercial fair-use analysis. No Quora service access or redistribution is involved.",
+    "other_sources": {
+      "https://www.kaggle.com/competitions/quora-question-pairs": "Question-only duplicate pairs. Unsuitable.",
+      "https://people.cs.vt.edu/gangwang/gang.pdf": "Answer-bearing historical study. No readily obtainable authorized release established in the allotted discovery window."
+    },
+    "acquired_on": "2026-11-25"
+  },
+  "linkedin": {
+    "repo": "NeuML/neuml-linkedin-202501",
+    "revision": "90233fe76de8f568ad8741c1785f8f31cab3adcc",
+    "url": "https://huggingface.co/datasets/NeuML/neuml-linkedin-202501",
+    "files": [
+      {
+        "url": "https://huggingface.co/datasets/NeuML/neuml-linkedin-202501/resolve/90233fe76de8f568ad8741c1785f8f31cab3adcc/posts.csv",
+        "path": "raw/linkedin/posts.csv",
+        "bytes": 118066,
+        "sha256": "d73a1847e4162f3527bde8d51bab29fc147010ac9859a6acec165d02d55351fa"
+      },
+      {
+        "url": "https://huggingface.co/datasets/BrianClone/linkedin_posts/resolve/50f7949bc20ad98767478b99fb655c3ffe86d07a/SHIELD-data.csv",
+        "path": "raw/linkedin/SHIELD-data.csv",
+        "bytes": 1146252,
+        "sha256": "8788b2f244675c196023d464b72d61400896327561807df31ee6f26b5def0ced"
+      },
+      {
+        "url": "https://huggingface.co/datasets/aidn/linkedin-posts-score/resolve/ed4c4f3f754c08edda627a6c4ad598506ff92ed0/data/train-00000-of-00001.parquet",
+        "path": "raw/linkedin/data/train-00000-of-00001.parquet",
+        "bytes": 43880,
+        "sha256": "d2211204f4daa6954a02845eacb8047211e1e744f88907b7e4bad04689e41bf8"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/luminati-io/linkedin-posts-dataset-sample/01dbbb6290467b787a1559847b389d7b39ccdebe/LinkedIn%20posts.csv",
+        "path": "raw/linkedin/Bright-Data-sample.csv",
+        "bytes": 17077243,
+        "sha256": "25619f1d2a2c75704ddf96a5cdff20376a96e006337fe815d589cf8823230631"
+      }
+    ],
+    "supplements": [
+      {
+        "repo": "BrianClone/linkedin_posts",
+        "revision": "50f7949bc20ad98767478b99fb655c3ffe86d07a",
+        "files": [
+          "SHIELD-data.csv"
+        ]
+      },
+      {
+        "repo": "aidn/linkedin-posts-score",
+        "revision": "ed4c4f3f754c08edda627a6c4ad598506ff92ed0",
+        "files": [
+          "data/train-00000-of-00001.parquet"
+        ],
+        "folder": "data"
+      }
+    ],
+    "external_files": [
+      {
+        "url": "https://raw.githubusercontent.com/luminati-io/linkedin-posts-dataset-sample/01dbbb6290467b787a1559847b389d7b39ccdebe/LinkedIn%20posts.csv",
+        "name": "Bright-Data-sample.csv",
+        "bytes": 17077243
+      }
+    ],
+    "license": "Apache-2.0 per NeuML. NeuML exported its own company posts for 12 months ending January 2025 and released them publicly. This is the clearest creator-published source among the three requested candidates.",
+    "other_sources": {
+      "https://huggingface.co/datasets/aidn/linkedin-posts-score": "ed4c4f3f754c08edda627a6c4ad598506ff92ed0. Public at Hugging Face, custom Other label. 25 posts in the pinned Parquet, mostly German, scored across five dimensions by Llama 4 Maverick. Underlying creator permissions are undocumented. Qualifying high-scoring English posts are preferred under the private noncommercial research rationale.",
+      "https://huggingface.co/datasets/BrianClone/linkedin_posts": "50f7949bc20ad98767478b99fb655c3ffe86d07a. Public SHIELD analytics export. No license declaration. Used selectively under the documented private research fair-use basis. Author names, account IDs, URLs and analytics are omitted from training.",
+      "https://github.com/luminati-io/linkedin-posts-dataset-sample": "01dbbb6290467b787a1559847b389d7b39ccdebe. Public vendor-published sample of 1,000 posts from its collection. No explicit per-post license. Only eligible English original post text is used under the stated private research fair-use basis. No profiles, comments, engagement data, media, or repost bodies are used."
+    },
+    "acquired_on": "2026-11-25"
+  },
+  "reddit": {
+    "url": "https://nicschrading.com/data/",
+    "revision": "Schrading et al. 2015 public SQLite release",
+    "direct": "https://www.dropbox.com/scl/fi/cz38dr9k7f0wtk1rfk834/new_reddit.db.7z?rlkey=so48d1hye8wzbed3t93seet3v&dl=1",
+    "file": "new_reddit.db.7z",
+    "license": "Researcher permits research use and declares CC BY-NC-SA 4.0. Upstream Reddit terms distinguish platform access from other uses. The private paper experiment uses the archived snapshot and redacts both sides of selected pairs. No Reddit service access, author identities or source redistribution are involved.",
+    "other_sources": {
+      "https://github.com/rowanz/turingadvice": "RedditAdvice2019 author-linked object returned HTTP 403 for anonymous reads. Unused.",
+      "https://huggingface.co/datasets/HuggingFaceGECLM/REDDIT_threaded": "Pushshift-derived relationship_advice conversations merge texts and retain only thread-level scores. No declared license. Unused.",
+      "https://huggingface.co/datasets/yonatanko/Relationship_Advice": "Small paired archive derived from 2022–2024 data including dating_advice. License listed as unknown. Unused."
+    },
+    "acquired_on": "2026-11-25",
+    "files": [
+      {
+        "url": "https://www.dropbox.com/scl/fi/cz38dr9k7f0wtk1rfk834/new_reddit.db.7z?rlkey=so48d1hye8wzbed3t93seet3v&dl=1",
+        "path": "raw/reddit/new_reddit.db.7z",
+        "bytes": 82214932,
+        "sha256": "622515a2a2dede1f1e49d631156fc1d56fd9d7d6e5d266162fc3b74d76cc2e37"
+      }
+    ]
   }
 }

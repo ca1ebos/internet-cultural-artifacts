@@ -104,10 +104,10 @@ def main(after_original):
         train_source(name, smoke=True)
         train_source(name, smoke=False)
     preserve()
-    primary(available)
     if not (ARTIFACTS / 'evaluation' / 'summary.json').exists():
         invoke('evaluate.py')
         invoke('evaluate.py', '--report')
+    primary(available)
     deploy(available)
     invoke('trace.py')
     invoke('trace.py', '--plot', ARTIFACTS / 'development' / 'checkpoint-trajectories.png')

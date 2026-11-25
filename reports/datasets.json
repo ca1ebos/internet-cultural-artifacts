@@ -204,5 +204,510 @@
         "max_tokens": 453
       }
     }
+  },
+  "quora": {
+    "selection": {
+      "source_manifest_sha256": "9c0afae46ad482506662afde5af1860027e2955baaa864fbe8d3850378ed0508",
+      "scanned": {
+        "Quora-QuAD.jsonl": 56402
+      },
+      "eligible": {
+        "personal growth": 46,
+        "everyday observations": 1232,
+        "everyday routines": 169,
+        "business and growth": 59,
+        "career and work": 50,
+        "learning": 85,
+        "technology": 83,
+        "relationships": 39
+      },
+      "schemas": {
+        "Quora-QuAD.jsonl": [
+          "answer",
+          "question"
+        ]
+      },
+      "splits": {
+        "test": {
+          "count": 120,
+          "groups": {
+            "business and growth": 9,
+            "career and work": 5,
+            "everyday observations": 42,
+            "everyday routines": 24,
+            "learning": 13,
+            "personal growth": 4,
+            "relationships": 6,
+            "technology": 17
+          },
+          "mean_answer_chars": 1248.59,
+          "sha256": "a5f11415fc4c47f44e2fc5c7d6d6519af1c4f518ee6cef4cdd06596b8f56eb67"
+        },
+        "validation": {
+          "count": 120,
+          "groups": {
+            "business and growth": 8,
+            "career and work": 11,
+            "everyday observations": 34,
+            "everyday routines": 23,
+            "learning": 20,
+            "personal growth": 6,
+            "relationships": 9,
+            "technology": 9
+          },
+          "mean_answer_chars": 1130.68,
+          "sha256": "10af013fb1bfc9bdc49131da5f22f2e28597a317186502b2265bb0d2e69a5eb5"
+        },
+        "train": {
+          "count": 1000,
+          "groups": {
+            "business and growth": 42,
+            "career and work": 34,
+            "everyday observations": 634,
+            "everyday routines": 121,
+            "learning": 52,
+            "personal growth": 36,
+            "relationships": 24,
+            "technology": 57
+          },
+          "mean_answer_chars": 1171.66,
+          "sha256": "7c12625ae6d179959869677215841d38edc7de56b4a287da31d370f6d88541e1"
+        }
+      }
+    },
+    "audit": {
+      "test": {
+        "rows": 120,
+        "contains_code_delimiter": 0,
+        "contains_first_person_marker": 109,
+        "contains_exclamation": 30,
+        "mean_tokens": 304.5,
+        "max_tokens": 552
+      },
+      "validation": {
+        "rows": 120,
+        "contains_code_delimiter": 0,
+        "contains_first_person_marker": 112,
+        "contains_exclamation": 23,
+        "mean_tokens": 281.8,
+        "max_tokens": 701
+      },
+      "train": {
+        "rows": 1000,
+        "contains_code_delimiter": 3,
+        "contains_first_person_marker": 897,
+        "contains_exclamation": 208,
+        "mean_tokens": 288.0,
+        "max_tokens": 601
+      }
+    }
+  },
+  "linkedin": {
+    "selection": {
+      "source_manifest_sha256": "9def9756a9b066e6b65f466342d92d627512c38bfc95c3ea69486a92f2bdbd76",
+      "scanned": {
+        "posts.csv": 258,
+        "SHIELD-data.csv": 1035,
+        "train-00000-of-00001.parquet": 25,
+        "Bright-Data-sample.csv": 1000
+      },
+      "eligible": {
+        "technology (posts.csv)": 107,
+        "everyday observations (posts.csv)": 35,
+        "career and work (posts.csv)": 3,
+        "personal growth (posts.csv)": 3,
+        "business and growth (posts.csv)": 6,
+        "learning (posts.csv)": 2,
+        "relationships (posts.csv)": 2,
+        "everyday routines (posts.csv)": 3,
+        "technology (SHIELD-data.csv)": 310,
+        "everyday routines (SHIELD-data.csv)": 109,
+        "career and work (SHIELD-data.csv)": 308,
+        "learning (SHIELD-data.csv)": 122,
+        "business and growth (SHIELD-data.csv)": 24,
+        "everyday observations (SHIELD-data.csv)": 28,
+        "personal growth (SHIELD-data.csv)": 31,
+        "relationships (SHIELD-data.csv)": 2,
+        "business and growth (train-00000-of-00001.parquet)": 2,
+        "career and work (train-00000-of-00001.parquet)": 1,
+        "everyday routines (Bright-Data-sample.csv)": 98,
+        "business and growth (Bright-Data-sample.csv)": 107,
+        "personal growth (Bright-Data-sample.csv)": 31,
+        "career and work (Bright-Data-sample.csv)": 96,
+        "everyday observations (Bright-Data-sample.csv)": 35,
+        "learning (Bright-Data-sample.csv)": 61,
+        "technology (Bright-Data-sample.csv)": 64,
+        "relationships (Bright-Data-sample.csv)": 23
+      },
+      "schemas": {
+        "posts.csv": [
+          "Post title",
+          "Post link",
+          "Post type",
+          "Posted by",
+          "Created date",
+          "Audience",
+          "Impressions",
+          "Clicks",
+          "Click through rate (CTR)",
+          "Likes",
+          "Comments",
+          "Reposts",
+          "Engagement rate"
+        ],
+        "SHIELD-data.csv": [
+          "urn",
+          "text",
+          "type",
+          "firstName",
+          "lastName",
+          "numImpressions",
+          "numViews",
+          "numReactions",
+          "numComments",
+          "numShares",
+          "numVotes",
+          "numEngagementRate",
+          "hashtags",
+          "createdAt (TZ=America/Los_Angeles)",
+          "link"
+        ],
+        "train-00000-of-00001.parquet": [
+          "timestamp",
+          "post_text",
+          "total_score",
+          "max_score",
+          "pct",
+          "verdict",
+          "metrics"
+        ],
+        "Bright-Data-sample.csv": [
+          "url",
+          "id",
+          "user_id",
+          "use_url",
+          "title",
+          "headline",
+          "post_text",
+          "date_posted",
+          "hashtags",
+          "embedded_links",
+          "images",
+          "videos",
+          "num_likes",
+          "num_comments",
+          "more_articles_by_user",
+          "more_relevant_posts",
+          "top_visible_comments",
+          "user_followers",
+          "user_posts",
+          "user_articles",
+          "post_type",
+          "account_type",
+          "post_text_html",
+          "repost",
+          "tagged_companies",
+          "tagged_people",
+          "user_title",
+          "author_profile_pic",
+          "num_connections",
+          "video_duration",
+          "external_link_data",
+          "video_thumbnail",
+          "document_cover_image",
+          "document_page_count",
+          "user_profile_pic",
+          "user_name",
+          "original_post_text"
+        ]
+      },
+      "splits": {
+        "test": {
+          "count": 120,
+          "groups": {
+            "business and growth (Bright-Data-sample.csv)": 9,
+            "business and growth (SHIELD-data.csv)": 4,
+            "business and growth (posts.csv)": 1,
+            "career and work (Bright-Data-sample.csv)": 9,
+            "career and work (SHIELD-data.csv)": 9,
+            "everyday observations (Bright-Data-sample.csv)": 4,
+            "everyday observations (SHIELD-data.csv)": 5,
+            "everyday observations (posts.csv)": 8,
+            "everyday routines (Bright-Data-sample.csv)": 9,
+            "everyday routines (SHIELD-data.csv)": 9,
+            "everyday routines (posts.csv)": 1,
+            "learning (Bright-Data-sample.csv)": 8,
+            "learning (SHIELD-data.csv)": 8,
+            "personal growth (Bright-Data-sample.csv)": 4,
+            "personal growth (SHIELD-data.csv)": 1,
+            "personal growth (posts.csv)": 1,
+            "relationships (Bright-Data-sample.csv)": 4,
+            "relationships (SHIELD-data.csv)": 1,
+            "relationships (posts.csv)": 1,
+            "technology (Bright-Data-sample.csv)": 8,
+            "technology (SHIELD-data.csv)": 8,
+            "technology (posts.csv)": 8
+          },
+          "mean_answer_chars": 699.46,
+          "sha256": "6c7f4bb91dea4caf7d04bf1df695fd547a6bb2aa85d2e73eafa4bbfb51def6fb"
+        },
+        "validation": {
+          "count": 120,
+          "groups": {
+            "business and growth (Bright-Data-sample.csv)": 10,
+            "business and growth (SHIELD-data.csv)": 2,
+            "business and growth (posts.csv)": 2,
+            "career and work (Bright-Data-sample.csv)": 10,
+            "career and work (SHIELD-data.csv)": 9,
+            "career and work (posts.csv)": 1,
+            "everyday observations (Bright-Data-sample.csv)": 8,
+            "everyday observations (SHIELD-data.csv)": 1,
+            "everyday observations (posts.csv)": 4,
+            "everyday routines (Bright-Data-sample.csv)": 9,
+            "everyday routines (SHIELD-data.csv)": 9,
+            "learning (Bright-Data-sample.csv)": 8,
+            "learning (SHIELD-data.csv)": 9,
+            "personal growth (Bright-Data-sample.csv)": 3,
+            "personal growth (SHIELD-data.csv)": 6,
+            "personal growth (posts.csv)": 1,
+            "relationships (Bright-Data-sample.csv)": 1,
+            "technology (Bright-Data-sample.csv)": 9,
+            "technology (SHIELD-data.csv)": 9,
+            "technology (posts.csv)": 9
+          },
+          "mean_answer_chars": 839.1,
+          "sha256": "e7ea90e40c91b93a3bfbba384dab14df1d7a72765705c952520209f1c1865a5f"
+        },
+        "train": {
+          "count": 1000,
+          "groups": {
+            "business and growth (Bright-Data-sample.csv)": 70,
+            "business and growth (SHIELD-data.csv)": 17,
+            "business and growth (posts.csv)": 3,
+            "business and growth (train-00000-of-00001.parquet)": 2,
+            "career and work (Bright-Data-sample.csv)": 68,
+            "career and work (SHIELD-data.csv)": 160,
+            "career and work (posts.csv)": 2,
+            "career and work (train-00000-of-00001.parquet)": 1,
+            "everyday observations (Bright-Data-sample.csv)": 23,
+            "everyday observations (SHIELD-data.csv)": 21,
+            "everyday observations (posts.csv)": 23,
+            "everyday routines (Bright-Data-sample.csv)": 67,
+            "everyday routines (SHIELD-data.csv)": 77,
+            "everyday routines (posts.csv)": 2,
+            "learning (Bright-Data-sample.csv)": 44,
+            "learning (SHIELD-data.csv)": 79,
+            "learning (posts.csv)": 2,
+            "personal growth (Bright-Data-sample.csv)": 24,
+            "personal growth (SHIELD-data.csv)": 21,
+            "personal growth (posts.csv)": 1,
+            "relationships (Bright-Data-sample.csv)": 18,
+            "relationships (SHIELD-data.csv)": 1,
+            "relationships (posts.csv)": 1,
+            "technology (Bright-Data-sample.csv)": 41,
+            "technology (SHIELD-data.csv)": 159,
+            "technology (posts.csv)": 73
+          },
+          "mean_answer_chars": 735.12,
+          "sha256": "74bf3c6e529ab5bbd7374882b61614048026a271dff7a043b3d01024960dd63b"
+        }
+      }
+    },
+    "audit": {
+      "test": {
+        "rows": 120,
+        "contains_code_delimiter": 0,
+        "contains_first_person_marker": 56,
+        "contains_exclamation": 34,
+        "mean_tokens": 208.6,
+        "max_tokens": 632
+      },
+      "validation": {
+        "rows": 120,
+        "contains_code_delimiter": 0,
+        "contains_first_person_marker": 61,
+        "contains_exclamation": 43,
+        "mean_tokens": 244.8,
+        "max_tokens": 774
+      },
+      "train": {
+        "rows": 1000,
+        "contains_code_delimiter": 1,
+        "contains_first_person_marker": 612,
+        "contains_exclamation": 322,
+        "mean_tokens": 226.6,
+        "max_tokens": 775
+      }
+    }
+  },
+  "reddit": {
+    "selection": {
+      "source_manifest_sha256": "704a23d2750edb6148c65d5ddca5b340d00c664dcf81caf103d24d81b3d8cd7b",
+      "scanned": {
+        "relationship_advice": 4292,
+        "relationships": 7070
+      },
+      "eligible": {
+        "relationship_advice": 1034,
+        "relationships": 1061
+      },
+      "schemas": {
+        "submissions": [
+          [
+            "subreddit",
+            "TEXT"
+          ],
+          [
+            "author",
+            "TEXT"
+          ],
+          [
+            "title",
+            "TEXT"
+          ],
+          [
+            "selftext",
+            "TEXT"
+          ],
+          [
+            "id",
+            "TEXT"
+          ],
+          [
+            "external_link",
+            "TEXT"
+          ],
+          [
+            "score",
+            "INTEGER"
+          ],
+          [
+            "num_comments",
+            "INTEGER"
+          ],
+          [
+            "created_utc",
+            "INTEGER"
+          ],
+          [
+            "link_flair",
+            "TEXT"
+          ],
+          [
+            "sentiment",
+            "REAL"
+          ]
+        ],
+        "comments": [
+          [
+            "subreddit",
+            "TEXT"
+          ],
+          [
+            "author",
+            "TEXT"
+          ],
+          [
+            "submission_id",
+            "TEXT"
+          ],
+          [
+            "comment_id",
+            "TEXT"
+          ],
+          [
+            "parent_id",
+            "TEXT"
+          ],
+          [
+            "body",
+            "TEXT"
+          ],
+          [
+            "depth",
+            "INTEGER"
+          ],
+          [
+            "num_gilded",
+            "INTEGER"
+          ],
+          [
+            "score",
+            "INTEGER"
+          ],
+          [
+            "created_utc",
+            "INTEGER"
+          ],
+          [
+            "sim_score",
+            "REAL"
+          ],
+          [
+            "label",
+            "TEXT"
+          ],
+          [
+            "sentiment",
+            "REAL"
+          ]
+        ]
+      },
+      "splits": {
+        "test": {
+          "count": 120,
+          "groups": {
+            "relationship_advice": 60,
+            "relationships": 60
+          },
+          "mean_answer_chars": 528.69,
+          "sha256": "4e31f97686cc290f31fe11f6faea0f6ebeb87439203da47738f725d821cfe201"
+        },
+        "validation": {
+          "count": 120,
+          "groups": {
+            "relationship_advice": 60,
+            "relationships": 60
+          },
+          "mean_answer_chars": 570.66,
+          "sha256": "920299e23be3a0a8e625e432ee5dc59e4cedf261fff4f3e957a6e85e36b8bb4b"
+        },
+        "train": {
+          "count": 1000,
+          "groups": {
+            "relationship_advice": 500,
+            "relationships": 500
+          },
+          "mean_answer_chars": 486.48,
+          "sha256": "4114109b35547c11eb046d29a91349666189f0b18a6e5fcaa07db25d8aaf5f0c"
+        }
+      }
+    },
+    "audit": {
+      "test": {
+        "rows": 120,
+        "contains_code_delimiter": 0,
+        "contains_first_person_marker": 78,
+        "contains_exclamation": 6,
+        "mean_tokens": 382.2,
+        "max_tokens": 740
+      },
+      "validation": {
+        "rows": 120,
+        "contains_code_delimiter": 0,
+        "contains_first_person_marker": 83,
+        "contains_exclamation": 18,
+        "mean_tokens": 404.0,
+        "max_tokens": 773
+      },
+      "train": {
+        "rows": 1000,
+        "contains_code_delimiter": 0,
+        "contains_first_person_marker": 635,
+        "contains_exclamation": 105,
+        "mean_tokens": 382.1,
+        "max_tokens": 777
+      }
+    }
   }
 }

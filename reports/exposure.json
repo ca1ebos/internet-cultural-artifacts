@@ -1,0 +1,174 @@
+{
+  "stack": {
+    "selected_conversations": 1000,
+    "eligible_conversations": 997,
+    "excluded_overlength": 3,
+    "overlength_exclusion_rate": 0.003,
+    "sequence_lengths": {
+      "1-64": 4,
+      "65-128": 77,
+      "129-256": 570,
+      "257-384": 322,
+      "385-512": 24
+    },
+    "sequence_mean": 227.2146439317954,
+    "sequence_max": 483,
+    "input_tokens": 226533,
+    "supervised_tokens": 106088,
+    "planned_optimizer_steps": 125,
+    "run_started": true,
+    "checkpoints": {
+      "25": {
+        "samples": 200,
+        "input_tokens": 46147,
+        "supervised_tokens": 21211,
+        "epoch": 0.20060180541624875,
+        "full_state_preserved": false
+      },
+      "50": {
+        "samples": 400,
+        "input_tokens": 90824,
+        "supervised_tokens": 42146,
+        "epoch": 0.4012036108324975,
+        "full_state_preserved": true
+      },
+      "75": {
+        "samples": 600,
+        "input_tokens": 136640,
+        "supervised_tokens": 63668,
+        "epoch": 0.6018054162487463,
+        "full_state_preserved": true
+      },
+      "100": {
+        "samples": 800,
+        "input_tokens": 181701,
+        "supervised_tokens": 84808,
+        "epoch": 0.802407221664995,
+        "full_state_preserved": true
+      },
+      "125": {
+        "samples": 997,
+        "input_tokens": 226533,
+        "supervised_tokens": 106088,
+        "epoch": 1.0,
+        "full_state_preserved": true
+      }
+    }
+  },
+  "quora": {
+    "selected_conversations": 1000,
+    "eligible_conversations": 973,
+    "excluded_overlength": 27,
+    "overlength_exclusion_rate": 0.027,
+    "sequence_lengths": {
+      "1-64": 9,
+      "65-128": 87,
+      "129-256": 339,
+      "257-384": 329,
+      "385-512": 209
+    },
+    "sequence_mean": 279.9434737923947,
+    "sequence_max": 512,
+    "input_tokens": 272385,
+    "supervised_tokens": 246097,
+    "planned_optimizer_steps": 122,
+    "run_started": false,
+    "checkpoints": {}
+  },
+  "linkedin": {
+    "selected_conversations": 1000,
+    "eligible_conversations": 967,
+    "excluded_overlength": 33,
+    "overlength_exclusion_rate": 0.033,
+    "sequence_lengths": {
+      "1-64": 3,
+      "65-128": 234,
+      "129-256": 436,
+      "257-384": 212,
+      "385-512": 82
+    },
+    "sequence_mean": 212.8335056876939,
+    "sequence_max": 512,
+    "input_tokens": 205810,
+    "supervised_tokens": 171283,
+    "planned_optimizer_steps": 121,
+    "run_started": true,
+    "checkpoints": {}
+  },
+  "yahoo": {
+    "selected_conversations": 1000,
+    "eligible_conversations": 1000,
+    "excluded_overlength": 0,
+    "overlength_exclusion_rate": 0.0,
+    "sequence_lengths": {
+      "1-64": 53,
+      "65-128": 418,
+      "129-256": 449,
+      "257-384": 78,
+      "385-512": 2
+    },
+    "sequence_mean": 147.083,
+    "sequence_max": 452,
+    "input_tokens": 147083,
+    "supervised_tokens": 105208,
+    "planned_optimizer_steps": 125,
+    "run_started": true,
+    "checkpoints": {
+      "25": {
+        "samples": 200,
+        "input_tokens": 29475,
+        "supervised_tokens": 20813,
+        "epoch": 0.2,
+        "full_state_preserved": true
+      },
+      "50": {
+        "samples": 400,
+        "input_tokens": 58922,
+        "supervised_tokens": 42590,
+        "epoch": 0.4,
+        "full_state_preserved": true
+      },
+      "75": {
+        "samples": 600,
+        "input_tokens": 88276,
+        "supervised_tokens": 63268,
+        "epoch": 0.6,
+        "full_state_preserved": true
+      },
+      "100": {
+        "samples": 800,
+        "input_tokens": 117099,
+        "supervised_tokens": 83733,
+        "epoch": 0.8,
+        "full_state_preserved": true
+      },
+      "125": {
+        "samples": 1000,
+        "input_tokens": 147083,
+        "supervised_tokens": 105208,
+        "epoch": 1.0,
+        "full_state_preserved": true
+      }
+    }
+  },
+  "reddit": {
+    "selected_conversations": 1000,
+    "eligible_conversations": 856,
+    "excluded_overlength": 144,
+    "overlength_exclusion_rate": 0.144,
+    "sequence_lengths": {
+      "1-64": 1,
+      "65-128": 16,
+      "129-256": 165,
+      "257-384": 335,
+      "385-512": 339
+    },
+    "sequence_mean": 346.57943925233644,
+    "sequence_max": 512,
+    "input_tokens": 296672,
+    "supervised_tokens": 79996,
+    "planned_optimizer_steps": 107,
+    "run_started": false,
+    "checkpoints": {}
+  }
+}

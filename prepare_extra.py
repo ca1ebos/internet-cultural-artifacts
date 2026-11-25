@@ -122,6 +122,7 @@ def linkedin_rows(path, scanned, schemas):
 
 
 def quora_rows(path, scanned, schemas):
+    best_by_question = {}
     for index, row in enumerate(read_rows(path)):
         schemas.setdefault(path.name, sorted(row))
         scanned[path.name] += 1
@@ -136,7 +137,11 @@ def quora_rows(path, scanned, schemas):
             continue
         score = (min(len(cues), 7) + .2 * min(style, 8)
                  + .45 * min(answer.count('\n\n'), 7) + min(len(answer), 1450) / 1000)
-        yield question, answer, score, topic(question), {'row_index': index, 'archive': path.name}
+        key = normalized(question)
+        previous = best_by_question.get(key)
+        if previous is None or score > previous[2]:
+            best_by_question[key] = question, answer, score, topic(question), {'row_index': index, 'archive': path.name}
+    yield from best_by_question.values()
 
 
 def reddit_rows(path, scanned, schemas):

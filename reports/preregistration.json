@@ -5,6 +5,9 @@
   "final_suite_sha256": "e0854520dd7dc8d9d28608fbbe9ba8cb1df04db974e0f8285e676ed1e3b67703",
   "primary": "unchanged base vs each one-epoch adapter, greedy and without personality system prompts",
   "checkpoint_zero": "unchanged base",
+  "formal_inference": "pinned llama.cpp b12728, IQ4_XS for every final condition, context 8192",
+  "development_inference": "pinned llama.cpp b12728, IQ4_XS base and optional F16 GGUF LoRA, context 2048",
+  "pilot": "Partial unchanged-base Windows Transformers NF4 run archived separately for performance diagnosis",
   "base": {
     "repo": "Qwen/Qwen3-4B-Instruct-2507",
     "revision": "cdbee75f17c01a7cc42f958dc650907174af0554"

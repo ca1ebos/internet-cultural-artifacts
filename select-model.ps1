@@ -9,7 +9,11 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $config = Get-Content -LiteralPath "$PSScriptRoot/config.json" -Raw | ConvertFrom-Json
-$files = [ordered]@{base = 'Qwen4B-Base-Q4_K_M.gguf'}
+$baseFile = 'Qwen4B-Base-IQ4_XS.gguf'
+if (!(Test-Path -LiteralPath "$PSScriptRoot/artifacts/gguf/$baseFile")) {
+    $baseFile = 'Qwen4B-Base-Q4_K_M.gguf'
+}
+$files = [ordered]@{base = $baseFile}
 foreach ($name in @('stack', 'yahoo', 'linkedin', 'quora', 'reddit')) {
     $files[$name] = 'Qwen4B-' + $config.$name.name + '-IQ4_XS.gguf'
 }

@@ -67,7 +67,7 @@ TRL supports assistant-only SFT through template generation spans. The shipped Q
 & $py evaluate.py --summarize-reviews
 ```
 
-The same final prompts in `prompts.jsonl` run against the unchanged NF4 base and each standalone adapter without a system prompt. The original two prompted controls are a secondary analysis. Generation is greedy and capped at 192 new tokens. Exact checks cover JSON, context recall, and matching tool arguments. Behavioral markers count lexical evidence separately from correctness, and can count quotations or negation. The blind review sheet under `artifacts/primary/` uses 0 for absent or wrong, 1 for weak, 2 for mostly successful, and 3 for complete. Score severity from 0 for low to 3 for highly consequential, and mark contextual and safety measures only where applicable. Count each distinct useful, materially relevant fact or actionable step once for information density. Guess the personality before opening the answer key. The checkpoint study uses the separate `checkpoint_prompts.jsonl` suite with the unchanged base as checkpoint zero.
+The same final prompts in `prompts.jsonl` run against the unchanged base and each merged adapter using the pinned llama.cpp build and IQ4_XS throughout. The primary run supplies no system persona. The original two prompted controls are a secondary analysis with the same backend. Generation is greedy and capped at 192 new tokens. Exact checks cover JSON, context recall, and matching tool arguments. Behavioral markers count lexical evidence separately from correctness, and can count quotations or negation. The blind review sheet under `artifacts/primary/` uses 0 for absent or wrong, 1 for weak, 2 for mostly successful, and 3 for complete. Score severity from 0 for low to 3 for highly consequential, and mark contextual and safety measures only where applicable. Count each distinct useful, materially relevant fact or actionable step once for information density. Guess the personality before opening the answer key. The checkpoint study uses the separate `checkpoint_prompts.jsonl` suite, starts at the unchanged IQ4_XS base as checkpoint zero, and applies F16 GGUF LoRAs at inference for the trajectory.
 
 ### llama.cpp deployment
 
@@ -80,9 +80,9 @@ The official llama.cpp build is pinned to `b12728` (`ea7229481`). CPU merge star
 & $py deploy.py benchmark artifacts/gguf/Qwen4B-YahooAnswers-IQ4_XS.gguf yahoo-IQ4_XS --condition yahoo-adapter
 ```
 
-Serve either file individually through the existing llama.cpp-compatible client or start the pinned server with the preferred model path. The OpenAI-compatible API listens at `http://127.0.0.1:8080/v1`. Use the model selection in your client or start another instance with a different port when resources permit. A 4,096-token context is a starting point for interactive use. The benchmark covers 2,048 and 8,192 context slots.
+Serve a model individually through the existing llama.cpp-compatible client or start the pinned server with the preferred model path. The OpenAI-compatible API listens at `http://127.0.0.1:8080/v1`. Use the model selection in your client or start another instance with a different port when resources permit. A 4,096-token context is a starting point for interactive use. The benchmark covers 2,048 and 8,192 context slots.
 
-` .\select-model.ps1` lists the local exports. ` .\select-model.ps1 -Model yahoo` serves one model through the same loopback API.
+`.\select-model.ps1` lists the local exports. `.\select-model.ps1 -Model yahoo` serves one model through the same loopback API.
 
 ```powershell
 .\artifacts\llama\bin\llama-server.exe `

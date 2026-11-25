@@ -225,6 +225,7 @@ def finalize(source, grouped, scanned, eligible, schemas, manifest_path, train_c
     output = ARTIFACTS / 'data' / source
     limits = {'train': train_count, 'validation': holdout_count, 'test': holdout_count}
     dedup = Dedup()
+    used_keys = set()
     selected_splits, stats = {}, {}
     for split in ('test', 'validation', 'train'):
         queues = {topic: deque(sorted(values, key=lambda row: (-row[0], row[1])))
@@ -234,7 +235,8 @@ def finalize(source, grouped, scanned, eligible, schemas, manifest_path, train_c
             for topic, queue in list(queues.items()):
                 while queue:
                     score, key, question, answer, metadata, path = queue.popleft()
-                    if dedup.add(question, answer):
+                    if key not in used_keys and dedup.add(question, answer):
+                        used_keys.add(key)
                         identifier = f'{source}-{key:016x}'
                         texts.append({'id': identifier, 'messages': [{'role': 'user', 'content': question},
                                                                     {'role': 'assistant', 'content': answer}]})

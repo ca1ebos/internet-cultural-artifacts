@@ -98,7 +98,8 @@ def llama_request(url, messages, case, limit):
     for call in message.get('tool_calls') or []:
         function = call['function']
         try:
-            calls.append({'name': function['name'], 'arguments': json.loads(function['arguments'])})
+            arguments = function['arguments']
+            calls.append({'name': function['name'], 'arguments': json.loads(arguments) if isinstance(arguments, str) else arguments})
         except (TypeError, json.JSONDecodeError):
             return text, [], elapsed, result['usage']
     if not calls:
@@ -127,7 +128,7 @@ def archive_loss(model, tokenizer, torch, source):
 
 
 def evaluate(conditions, cases, output, server, tag, limit, artifact_sha, checkpoint=None,
-             suite=ROOT / 'prompts.jsonl'):
+             suite=ROOT / 'prompts.jsonl', context=None):
     complete_suite = suite.resolve() == ROOT / 'prompts.jsonl' and len(cases) == sum(1 for _ in read_rows(suite))
     if not server:
         import torch
@@ -164,6 +165,8 @@ def evaluate(conditions, cases, output, server, tag, limit, artifact_sha, checkp
         identity = {'condition': condition, 'backend': 'llama.cpp' if server else 'transformers-nf4',
                     'artifact': artifact_id, 'limit': limit, 'system': system, 'cases': [case['id'] for case in cases],
                     'prompts_sha256': sha256(suite), 'script_sha256': sha256(Path(__file__))}
+        if server:
+            identity['context'] = context
         if identity_path.exists() and json.loads(identity_path.read_text(encoding='utf-8')) != identity:
             raise ValueError(f'Evaluation settings changed for {name}. Choose a new output directory or tag.')
         if path.exists() and not identity_path.exists():
@@ -220,6 +223,34 @@ def evaluate(conditions, cases, output, server, tag, limit, artifact_sha, checkp
             model = model.unload()
             gc.collect()
             torch.cuda.empty_cache()
+
+
+def evaluate_gguf(conditions, cases, output, tag, limit, suite, context):
+    from collections import defaultdict
+    from deploy import LLAMA, serve
+
+    by_model = defaultdict(list)
+    for condition in conditions:
+        source = condition.split('-')[0] if condition.endswith('-adapter') else 'base'
+        by_model[source].append(condition)
+    for source, group in by_model.items():
+        name = 'Base' if source == 'base' else CONFIG[source]['name']
+        model = ARTIFACTS / 'gguf' / f'Qwen4B-{name}-IQ4_XS.gguf'
+        if not model.exists():
+            # Keep the exact converter and quantizer used for the deployment files.
+            import subprocess
+            import sys
+            options = ['--transient-merge'] if source not in {'base', 'stack', 'yahoo'} else []
+            log = ARTIFACTS / 'llama' / f'{source}-evaluation-export.log'
+            env = dict(os.environ, OMP_NUM_THREADS='3', MKL_NUM_THREADS='3')
+            print(f'Exporting {source} IQ4_XS for the matched comparison.', flush=True)
+            with log.open('w', encoding='utf-8') as file:
+                subprocess.run([sys.executable, str(ROOT / 'deploy.py'), 'export', source,
+                                '--types', 'IQ4_XS', *options], cwd=ROOT, env=env,
+                               stdout=file, stderr=subprocess.STDOUT, check=True)
+        digest = sha256(model)
+        with serve(LLAMA / 'bin', model, context, output / f'{tag or source}-suite-ctx{context}') as url:
+            evaluate(group, cases, output, url, tag, limit, digest, suite=suite, context=context)
 
 
 def report(cases, output, selected):
@@ -314,6 +345,8 @@ if __name__ == '__main__':
     parser.add_argument('--artifact-sha')
     parser.add_argument('--checkpoint', type=Path)
     parser.add_argument('--max-new', type=int, default=192)
+    parser.add_argument('--context', type=int, default=8192)
+    parser.add_argument('--backend', choices=['llama', 'transformers'], default='llama')
     parser.add_argument('--output', type=Path, default=ARTIFACTS / 'evaluation')
     parser.add_argument('--report', action='store_true')
     parser.add_argument('--summarize-reviews', action='store_true')
@@ -338,5 +371,8 @@ if __name__ == '__main__':
     else:
         if not cases:
             parser.error('No matching cases')
-        evaluate(args.conditions, cases, args.output, args.server, args.tag, args.max_new,
-                 args.artifact_sha, args.checkpoint, args.suite)
+        if args.server or args.backend == 'transformers' or args.checkpoint:
+            evaluate(args.conditions, cases, args.output, args.server, args.tag, args.max_new,
+                     args.artifact_sha, args.checkpoint, args.suite, args.context)
+        else:
+            evaluate_gguf(args.conditions, cases, args.output, args.tag, args.max_new, args.suite, args.context)
